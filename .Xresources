@@ -1,0 +1,40 @@
+! urxvt fix for Home and End
+*keysym*Home: \033[1~
+*keysym*End: \033[4~
+
+
+*font: xft:DejaVu Sans Mono:pixelsize=13
+*scrollstyle: plain
+*scrollBar_right: true
+*fading: 5
+
+*background: #151515
+*foreground: #f8f6f2
+*cursorColor: #99ad6a
+*scrollColor: #45413b
+*fadeColor: #ffffff
+
+! black
+*color0: #3b3b3b
+*color8: #3b3b3b
+! red
+*color1: #cf6a4c
+*color9: #902020
+! green
+*color2: #99ad6a
+*color10: #99ad6a
+! yellow
+*color3: #de0000
+*color11: #d8ad4c
+! blue
+*color4: #597bc5
+*color12: #597bc5
+! magenta
+*color5: #a037b0
+*color13: #a037b0
+! cyan
+*color6: #71b9f8
+*color14: #71b9f8
+! white
+*color7: #f8f6f2
+*color8: #f8f6f2

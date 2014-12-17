@@ -1,0 +1,11 @@
+[user]
+    email = igi.222@gmail.com
+	name = IGI-111
+[push]
+	default = simple
+[core]
+	editor = vim
+[github]
+	user = IGI-111
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
