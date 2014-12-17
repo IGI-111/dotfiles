@@ -49,7 +49,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
-beautiful.wallpaper = os.getenv("HOME") .. "/Pics/hexes.png"
+--beautiful.wallpaper = os.getenv("HOME") .. "/Pics/hexes.png" -- change your background here
 
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
