@@ -19,8 +19,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " GitHub repos
 NeoBundle 'luochen1990/rainbow'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'tpope/vim-repeat'
 NeoBundle 'scrooloose/syntastic'
 "NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-commentary'
@@ -39,10 +37,8 @@ NeoBundle 'Shougo/vimproc', {
 			\     'unix' : 'make -f make_unix.mak',
 			\    },
 			\ }
-NeoBundle 'Shougo/vimshell.vim'
+"NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'skammer/vim-css-color'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'sjl/gundo.vim'
@@ -54,9 +50,6 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'haya14busa/incsearch.vim'
 " NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'osyo-manga/vim-over'
-
-" Vim-scripts repos
-NeoBundle 'DoxygenToolkit.vim'
 
 call neobundle#end()
 
