@@ -78,7 +78,7 @@ lain.layout.termfair.nmaster = 3
 lain.layout.termfair.ncol = 1
 
 -- useless gap on layouts
-theme.useless_gap_width = 10
+theme.useless_gap_width = 0
 beautiful.border_width = 1
 -- icons for lain
 theme.lain_icons         = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/zenburn/"
