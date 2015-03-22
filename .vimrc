@@ -80,7 +80,7 @@ set mouse=a
 "LaTeX configuration
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
-au FileType tex setlocal wrap spell
+autocmd FileType tex setlocal wrap spell
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
@@ -104,6 +104,7 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 
 " syntastic options
+autocmd FileType qf setlocal wrap
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_asm_compiler = 'mips-gcc'
