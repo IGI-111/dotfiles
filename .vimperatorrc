@@ -1,9 +1,0 @@
-colorscheme molokai
-set defsearch=searx
-set hintchars=qsdfghjklm
-nnoremap h <C-o>
-nnoremap l <C-i>
-nnoremap H gT
-nnoremap L gt
-nnoremap J <C-d>
-nnoremap K <C-u>
