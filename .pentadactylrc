@@ -1,6 +1,6 @@
 colorscheme molokai
 set defsearch=searx
-set hintchars=qsdfghjklm
+set hintkeys=qsdfghjklm
 nmap -builtin h <C-o>
 nmap -builtin l <C-i>
 nmap -builtin H gT
