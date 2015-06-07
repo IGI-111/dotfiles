@@ -19,6 +19,14 @@ set $mod Mod4
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 10
 
+set $blue #005588
+set $gray1 #252525
+set $gray2 #151515
+
+client.focused $gray1 $gray1 #FFFFFF #333333
+client.focused_inactive $gray2 $gray2 #FFFFFF #000000
+client.unfocused $gray2 $gray2 #FFFFFF #000000
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -26,11 +34,13 @@ font pango:DejaVu Sans Mono 10
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# new_window 1pixel
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -128,7 +138,7 @@ mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
+        # Pressing right will grow thr window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
@@ -150,11 +160,19 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# finds out, if availabler
 bar {
-        status_command i3status
+    status_command i3status
+    colors {
+        statusline #EEEEEE
+        background #0E0E0E
+        focused_workspace $gray2 $gray2 #FFFFFF
+        inactive_workspace $gray1 $gray1 #555555
+    }
 }
 
 # Setup the wallpaper
-exec --no-startup-id /usr/bin/feh --bg-scale /home/igi-111/Pics/lattice.png
-exec --no-startup-id /usr/bin/urxvtd
+exec --no-startup-id feh --bg-scale /home/igi-111/Pics/hexes.png
+exec --no-startup-id urxvtd
+exec --no-startup-id skype
+exec --no-startup-id sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam -silent' %U
