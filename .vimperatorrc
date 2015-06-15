@@ -1,5 +1,4 @@
 colorscheme molokai
-set gui=nonavigation
 set defsearch=duckduckgo
 set hintchars=qsdfghjklm
 nnoremap h <C-o>
