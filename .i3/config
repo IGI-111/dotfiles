@@ -20,7 +20,7 @@ set $mod Mod4
 font pango:DejaVu Sans Mono 10
 
 set $blue #005588
-set $gray1 #252525
+set $gray1 #333333
 set $gray2 #151515
 
 client.focused $gray1 $gray1 #FFFFFF #333333
@@ -34,7 +34,7 @@ client.unfocused $gray2 $gray2 #FFFFFF #000000
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-# new_window 1pixel
+new_window 1pixel
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
