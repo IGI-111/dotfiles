@@ -2,14 +2,12 @@ colorscheme molokai
 set defsearch=duckduckgo
 set hintchars=qsdfghjklm
 nnoremap h <C-o>
+nnoremap j <Down>
+nnoremap k <Up>
 nnoremap l <C-i>
 nnoremap H gT
 nnoremap L gt
 nnoremap J <C-d>
 nnoremap K <C-u>
-nnoremap h <Left>
-nnoremap j <Down>
-nnoremap k <Up>
-nnoremap l <Right>
 set gui=nonavigation
 style -name ublock * #nav-bar * { visibility: visible ; }
