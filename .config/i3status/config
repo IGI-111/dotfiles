@@ -12,26 +12,37 @@ general {
 }
 
 # order += "ipv6"
-order += "disk /"
-order += "run_watch DHCP"
-order += "wireless _first_"
-# order += "ethernet _first_"
-order += "load"
+# order += "disk /"
+# order += "run_watch DHCP"
+# order += "run_watch VPN"
+# order += "wireless wlp3s0"
+# order += "ethernet enp9s0"
+order += "battery 1"
+# order += "load"
 order += "tztime local"
 
-wireless _first_ {
+wireless wlp3s0 {
         format_up = "W: (%quality at %essid) %ip"
         format_down = "W: down"
 }
 
-ethernet _first_ {
+ethernet enp9s0 {
         # if you use %speed, i3status requires root privileges
         format_up = "E: %ip (%speed)"
         format_down = "E: down"
 }
 
+battery 1 {
+        format = "%status %percentage %remaining"
+        path = "/sys/class/power_supply/BAT%d/uevent"
+}
+
 run_watch DHCP {
         pidfile = "/var/run/dhcpcd*.pid"
+}
+
+run_watch VPN {
+        pidfile = "/var/run/vpnc/pid"
 }
 
 tztime local {
