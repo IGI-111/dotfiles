@@ -50,6 +50,10 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'haya14busa/incsearch.vim'
 " NeoBundle 'mattn/gist-vim', {'depends': 'mattn/webapi-vim'}
 NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'timonv/vim-cargo'
+
+NeoBundle 'python.vim'
 
 call neobundle#end()
 
@@ -260,7 +264,7 @@ set incsearch        "Find the next match as we type the search
 " set nohlsearch         "doesn't Hilight searches by default
 set viminfo='100,f1  "Save up to 100 marks, enable capital marks
 
-" ================ Turn Off Swap Files ============== 
+" ================ Turn Off Swap Files ==============
 set noswapfile
 set nobackup
 set nowb
@@ -281,7 +285,7 @@ set smarttab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set noexpandtab
+set expandtab
 
 filetype plugin on
 filetype indent on
