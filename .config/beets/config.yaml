@@ -1,0 +1,19 @@
+library: ~/Music/Library.blb
+directory: ~/Music
+import:
+    copy: yes
+    write: yes
+    resume: ask
+    quiet_fallback: skip
+    timid: no
+plugins: embedart fetchart replaygain
+threaded: yes
+
+paths:
+    default: $albumartist/$album/$track $title
+    singleton: Singletons/$artist - $title
+    comp: Compilations/$album/$track $title
+    albumtype:soundtrack: Soundtracks/$album/$track $title
+
+replaygain:
+    backend: gstreamer
