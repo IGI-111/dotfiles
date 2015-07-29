@@ -1,9 +1,9 @@
-[submodule ".vim/bundle/neobundle.vim"]
-	path = .vim/bundle/neobundle.vim
-	url = https://github.com/Shougo/neobundle.vim.git
 [submodule ".config/awesome/lain"]
 	path = .config/awesome/lain
 	url = https://github.com/copycat-killer/lain.git
 [submodule ".zprezto"]
 	path = .zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
+[submodule ".nvim/bundle/vim-plug"]
+	path = .nvim/bundle/vim-plug
+	url = https://github.com/junegunn/vim-plug.git
