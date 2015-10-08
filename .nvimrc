@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
 " git
 Plug 'tpope/vim-fugitive'
@@ -19,7 +19,9 @@ Plug 'godlygeek/tabular'
 Plug 'osyo-manga/vim-over'
 Plug 'haya14busa/incsearch.vim'
 
-Plug 'Valloric/YouCompleteMe', {'do': './install.sh'}
+Plug 'farseer90718/vim-taskwarrior'
+
+Plug 'Valloric/YouCompleteMe', {'do': 'python2 install.py --clang-complete'}
 
 call plug#end()
 
@@ -29,6 +31,7 @@ filetype plugin indent on
 
 set number                      "Line numbers are good
 set cursorline                  "highlight the line the cursor is on
+set colorcolumn=80
 set nohlsearch                  "No Highlighting by default
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
@@ -102,6 +105,11 @@ let mapleader = " "
 " nnoremap <Left>   <NOP>
 " nnoremap <Right>  <NOP>
 
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
 " autocorrect bindings
 map <Leader>z ]s
 map <Leader>Z [s
@@ -154,7 +162,6 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
 tnoremap <Esc> <C-\><C-n>
-
 
 " ================ Search Settings  =================
 
