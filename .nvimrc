@@ -79,6 +79,9 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_asm_compiler = 'mips-gcc'
 let g:syntastic_asm_dialect = 'intel'
 
+" ycm options
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
