@@ -7,7 +7,7 @@ Plug 'mhinz/vim-signify'
 " snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'luochen1990/rainbow'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-vinegar'

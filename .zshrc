@@ -12,9 +12,7 @@ fi
 
 # Customize to your needs...
 
-export EDITOR="vim"
-export CC="clang"
-export CXX="clang++"
+export EDITOR="nvim"
 
 autoload zkbd
 source ~/.zkbd/$TERM-:0.0 # may be different - check where zkbd saved the configuration:
@@ -33,3 +31,8 @@ source ~/.zkbd/$TERM-:0.0 # may be different - check where zkbd saved the config
 
 #autoload predict-on
 #predict-on
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. /etc/profile.d/fzf.zsh
+
