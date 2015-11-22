@@ -1,25 +1,22 @@
 call plug#begin('~/.nvim/plugged')
 
-" git
+Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-
-" snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-vinegar'
-Plug 'bling/vim-airline'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'sheerun/vim-polyglot'
+Plug 'dpwright/vim-tup'
 Plug 'godlygeek/tabular'
 Plug 'osyo-manga/vim-over'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Tpope/vim-commentary'
-
 Plug 'Valloric/YouCompleteMe', {'do': 'python2 install.py --clang-complete'}
 
 call plug#end()
@@ -171,7 +168,9 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-tnoremap <Esc> <C-\><C-n>
+if exists(':tnoremap')
+    tnoremap <Esc> <C-\><C-n>
+endif
 
 " ================ Search Settings  =================
 
