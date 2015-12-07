@@ -1,4 +1,4 @@
-call plug#begin('~/.nvim/plugged')
+call plug#begin()
 
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
@@ -17,7 +17,7 @@ Plug 'godlygeek/tabular'
 Plug 'osyo-manga/vim-over'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Tpope/vim-commentary'
-Plug 'Valloric/YouCompleteMe', {'do': 'python2 install.py --clang-complete'}
+Plug 'Shougo/deoplete.nvim'
 
 call plug#end()
 
