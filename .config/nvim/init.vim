@@ -79,8 +79,12 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_asm_compiler = 'mips-gcc'
 let g:syntastic_asm_dialect = 'intel'
 
-" ycm options
-let g:ycm_global_ycm_extra_conf = '~/.config/nvim/ycm_extra_conf.py'
+" deoplete options
+let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr> <Tab>
+            \ pumvisible() ? "\<C-n>" :
+            \ deoplete#mappings#manual_complete()
+
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
