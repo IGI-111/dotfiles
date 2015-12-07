@@ -18,6 +18,9 @@ Plug 'osyo-manga/vim-over'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim'
+Plug 'sjl/badwolf'
+Plug 'chriskempson/vim-tomorrow-theme'
+
 
 call plug#end()
 
@@ -49,7 +52,8 @@ autocmd FileType tex setlocal wrap spell
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    colorscheme jellybeans
+    set background=dark
+    colorscheme Tomorrow-Night-Eighties
 endif
 
 if &t_Co > 256 || has("gui_running")
