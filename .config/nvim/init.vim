@@ -7,7 +7,6 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-vinegar'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
@@ -20,6 +19,7 @@ Plug 'Tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim'
 Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'benekastah/neomake'
 
 call plug#end()
 
@@ -76,13 +76,8 @@ let g:airline_symbols.branch = ''
 " smarter tabline
 let g:airline#extensions#tabline#enabled = 1
 
-" syntastic options
-autocmd FileType qf setlocal wrap
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
-let g:syntastic_asm_compiler = 'mips-gcc'
-let g:syntastic_asm_dialect = 'intel'
-
+" neomake options
+autocmd! BufWritePost * Neomake
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -119,20 +114,39 @@ map Q @q
 vnoremap < <gv
 vnoremap > >gv
 
-function! ToggleErrors()
-    let old_last_winnr = winnr('$')
-    lclose
-    if old_last_winnr == winnr('$')
-        " Nothing was closed, open syntastic error location panel
-        Errors
-    endif
+function! GetBufferList()
+  redir =>buflist
+  silent! ls!
+  redir END
+  return buflist
 endfunction
 
+function! ToggleList(bufname, pfx)
+  let buflist = GetBufferList()
+  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+    if bufwinnr(bufnum) != -1
+      exec(a:pfx.'close')
+      return
+    endif
+  endfor
+  if a:pfx == 'l' && len(getloclist(0)) == 0
+      echohl ErrorMsg
+      echo "Location List is Empty."
+      return
+  endif
+  let winnr = winnr()
+  exec(a:pfx.'open')
+  if winnr() != winnr
+    wincmd p
+  endif
+endfunction
+
+
 "function keys for addons
-nnoremap <Leader>e :<C-u>call ToggleErrors()<CR>
-nnoremap <Leader>u :GundoToggle<CR>
-nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <Leader>r :RainbowParenthesesToggle<CR>
+nnoremap <silent> <Leader>u :GundoToggle<CR>
+nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>r :RainbowParenthesesToggle<CR>
+nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
 
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
