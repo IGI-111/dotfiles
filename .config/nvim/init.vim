@@ -21,7 +21,6 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
 
-
 call plug#end()
 
 filetype plugin indent on
@@ -29,13 +28,11 @@ filetype plugin indent on
 " ================ General Config ====================
 
 set number                      "Line numbers are good
-set cursorline                  "highlight the line the cursor is on
-set colorcolumn=80
-set nohlsearch                  "No Highlighting by default
+set cursorline                  "Highlight the line the cursor is on
+set colorcolumn=80              "Highlight the character limit
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
-set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
@@ -86,12 +83,6 @@ let g:syntastic_cpp_compiler_options = '-std=c++11 -Wall'
 let g:syntastic_asm_compiler = 'mips-gcc'
 let g:syntastic_asm_dialect = 'intel'
 
-" deoplete options
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab>
-            \ pumvisible() ? "\<C-n>" :
-            \ deoplete#mappings#manual_complete()
-
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -106,22 +97,11 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
-" http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
 " ================ Keybindings ======================
 
 let mapleader = " "
-
-" arrow keys are bad
-" inoremap <Up>     <NOP>
-" inoremap <Down>   <NOP>
-" inoremap <Left>   <NOP>
-" inoremap <Right>  <NOP>
-" nnoremap <Up>     <NOP>
-" nnoremap <Down>   <NOP>
-" nnoremap <Left>   <NOP>
-" nnoremap <Right>  <NOP>
 
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -152,32 +132,7 @@ endfunction
 nnoremap <Leader>e :<C-u>call ToggleErrors()<CR>
 nnoremap <Leader>u :GundoToggle<CR>
 nnoremap <Leader>t :TagbarToggle<CR>
-nnoremap <Leader>r :RainbowToggle<CR>
-
-" Easymotion mappings
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-s2)
-
-nmap <Leader>w <Plug>(easymotion-bd-w)
-
-" Turn on case sensitive feature
-let g:EasyMotion_smartcase = 1
-
-"incsearch settings
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-" :h g:incsearch#auto_nohlsearch
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+nnoremap <Leader>r :RainbowParenthesesToggle<CR>
 
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
@@ -187,6 +142,18 @@ endif
 
 set incsearch        "Find the next match as we type the search
 set viminfo='100,f1  "Save up to 100 marks, enable capital marks
+set hlsearch
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
@@ -229,6 +196,13 @@ set nofoldenable        "dont fold by default
 " ================ Completion =======================
 
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+
+" deoplete options
+let g:deoplete#enable_at_startup = 1
+inoremap <silent><expr> <Tab>
+            \ pumvisible() ? "\<C-n>" :
+            \ deoplete#mappings#manual_complete()
+
 
 " ================ Scrolling ========================
 
