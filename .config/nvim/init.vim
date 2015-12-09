@@ -215,7 +215,8 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <Tab>
             \ pumvisible() ? "\<C-n>" :
-            \ deoplete#mappings#manual_complete()
+            \ "\<Tab>"
+inoremap <silent><C-Space> deoplete#mappings#manual_complete()
 
 
 " ================ Scrolling ========================
