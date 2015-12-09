@@ -76,6 +76,9 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 
+" smarter tabline
+let g:airline#extensions#tabline#enabled = 1
+
 " syntastic options
 autocmd FileType qf setlocal wrap
 let g:syntastic_cpp_compiler = 'g++'
