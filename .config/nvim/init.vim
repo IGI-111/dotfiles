@@ -41,6 +41,7 @@ set encoding=utf-8              "Necessary to show Unicode glyphs
 set spelllang=fr,en
 set noshowmode                  "Don't show the mode(airline is handling this)
 set mouse=a                     "Mouse in terminal
+set clipboard=unnamed           "use system clipboard by default
 
 "LaTeX configuration
 set grepprg=grep\ -nH\ $*
@@ -190,7 +191,7 @@ set smarttab
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set expandtab
+set noexpandtab
 
 filetype plugin on
 filetype indent on
@@ -214,10 +215,7 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 " deoplete options
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <Tab>
-            \ pumvisible() ? "\<C-n>" :
-            \ "\<Tab>"
-inoremap <silent><C-Space> deoplete#mappings#manual_complete()
-
+            \ pumvisible() ? "\<C-n>" : "<Tab>"
 
 " ================ Scrolling ========================
 
