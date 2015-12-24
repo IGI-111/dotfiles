@@ -20,6 +20,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'benekastah/neomake'
+Plug 'vhdirk/vim-cmake'
 
 call plug#end()
 
@@ -79,6 +80,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " neomake options
 autocmd! BufWritePost * Neomake
+let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
