@@ -1,8 +1,14 @@
+"    _      _ __        _
+"   (_)__  (_) /_ _  __(_)_ _
+"  / / _ \/ / __/| |/ / /  ' \
+" /_/_//_/_/\__(_)___/_/_/_/_/
+
 call plug#begin()
 
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+"Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -17,14 +23,13 @@ Plug 'osyo-manga/vim-over'
 Plug 'haya14busa/incsearch.vim'
 Plug 'Tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim'
-Plug 'sjl/badwolf'
-Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'benekastah/neomake'
 Plug 'vhdirk/vim-cmake'
+Plug 'sjl/badwolf'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'NLKNguyen/papercolor-theme'
 
 call plug#end()
-
-filetype plugin indent on
 
 " ================ General Config ====================
 
@@ -51,22 +56,22 @@ autocmd FileType tex setlocal wrap spell
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    set background=dark
-    colorscheme Tomorrow-Night-Eighties
+	set background=dark
+	colorscheme PaperColor
 endif
 
 if &t_Co > 256 || has("gui_running")
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+	let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 endif
 
 if &t_Co > 2 || has("gui_running")
-    "switch syntax highlighting on, when the terminal has colors
-    syntax on
+	"switch syntax highlighting on, when the terminal has colors
+	syntax on
 endif
 
 " Setting the airline symbols
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 " old vim-powerline symbols
 let g:airline_left_sep = ''
@@ -118,30 +123,30 @@ vnoremap < <gv
 vnoremap > >gv
 
 function! GetBufferList()
-  redir =>buflist
-  silent! ls!
-  redir END
-  return buflist
+	redir =>buflist
+	silent! ls!
+	redir END
+	return buflist
 endfunction
 
 function! ToggleList(bufname, pfx)
-  let buflist = GetBufferList()
-  for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
-    if bufwinnr(bufnum) != -1
-      exec(a:pfx.'close')
-      return
-    endif
-  endfor
-  if a:pfx == 'l' && len(getloclist(0)) == 0
-      echohl ErrorMsg
-      echo "Location List is Empty."
-      return
-  endif
-  let winnr = winnr()
-  exec(a:pfx.'open')
-  if winnr() != winnr
-    wincmd p
-  endif
+	let buflist = GetBufferList()
+	for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
+		if bufwinnr(bufnum) != -1
+			exec(a:pfx.'close')
+			return
+		endif
+	endfor
+	if a:pfx == 'l' && len(getloclist(0)) == 0
+		echohl ErrorMsg
+		echo "Location List is Empty."
+		return
+	endif
+	let winnr = winnr()
+	exec(a:pfx.'open')
+	if winnr() != winnr
+		wincmd p
+	endif
 endfunction
 
 
@@ -152,7 +157,7 @@ nnoremap <silent> <Leader>r :RainbowParenthesesToggle<CR>
 nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
 
 if exists(':tnoremap')
-    tnoremap <Esc> <C-\><C-n>
+	tnoremap <Esc> <C-\><C-n>
 endif
 
 " ================ Search Settings  =================
@@ -217,7 +222,7 @@ set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 " deoplete options
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <Tab>
-            \ pumvisible() ? "\<C-n>" : "<Tab>"
+			\ pumvisible() ? "\<C-n>" : "<Tab>"
 
 " ================ Scrolling ========================
 
