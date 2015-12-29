@@ -5,6 +5,7 @@
 
 call plug#begin()
 
+Plug 'Shougo/neoinclude.vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 "Plug 'airblade/vim-gitgutter'
@@ -85,6 +86,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " neomake options
 autocmd! BufWritePost * Neomake
+let g:neomake_cpp_clang_maker = {
+    \ 'args': ['-std=c++14'],
+    \ }
 let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
 
 " ultisnips options
