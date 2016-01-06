@@ -5,6 +5,7 @@
 
 call plug#begin()
 
+Plug 'tpope/vim-repeat'
 Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/neoinclude.vim'
 Plug 'bling/vim-airline'
