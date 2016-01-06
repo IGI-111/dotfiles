@@ -5,6 +5,7 @@
 
 call plug#begin()
 
+Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/neoinclude.vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
@@ -22,7 +23,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'dpwright/vim-tup'
 Plug 'godlygeek/tabular'
 Plug 'osyo-manga/vim-over'
-Plug 'haya14busa/incsearch.vim'
 Plug 'Tpope/vim-commentary'
 Plug 'Shougo/deoplete.nvim'
 Plug 'benekastah/neomake'
@@ -175,6 +175,9 @@ function! ToggleList(bufname, pfx)
     endif
 endfunction
 
+" easymotion
+nmap s <Plug>(easymotion-s2)
+
 
 "function keys for addons
 nnoremap <silent> <Leader>u :GundoToggle<CR>
@@ -191,18 +194,12 @@ endif
 
 set incsearch        "Find the next match as we type the search
 set viminfo='100,f1  "Save up to 100 marks, enable capital marks
-set hlsearch
+set nohlsearch
 
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
