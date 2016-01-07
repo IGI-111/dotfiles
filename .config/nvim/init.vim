@@ -11,11 +11,12 @@ Plug 'Shougo/neoinclude.vim'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-"Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 "Plug 'mhinz/vim-signify'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'sjl/gundo.vim'
@@ -178,6 +179,7 @@ endfunction
 
 " easymotion
 nmap s <Plug>(easymotion-s2)
+let g:EasyMotion_smartcase = 1
 
 
 "function keys for addons
