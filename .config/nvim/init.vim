@@ -6,9 +6,10 @@
 call plug#begin()
 
 Plug 'tpope/vim-repeat'
+Plug 'wellle/targets.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/neoinclude.vim'
-Plug 'bling/vim-airline'
+Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
@@ -32,6 +33,7 @@ Plug 'vhdirk/vim-cmake'
 Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'nanotech/jellybeans.vim'
 Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
@@ -64,7 +66,7 @@ autocmd FileType tex setlocal wrap spell
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
     set background=dark
-    colorscheme PaperColor
+    colorscheme jellybeans
 endif
 
 if &t_Co > 256 || has("gui_running")
@@ -76,19 +78,9 @@ if &t_Co > 2 || has("gui_running")
     syntax on
 endif
 
-" Setting the airline symbols
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
-" old vim-powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-
-" smarter tabline
-let g:airline#extensions#tabline#enabled = 1
+let g:lightline = {
+      \ 'colorscheme': 'jellybeans',
+      \ }
 
 " neomake options
 autocmd! BufWritePost * Neomake

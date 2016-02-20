@@ -11,7 +11,7 @@
 *scrollColor: #45413b
 
 !TomorrowNightEighties
-#define t_background   #2d2d2d
+#define t_background   #151515
 #define t_current_line #393939
 #define t_selection    #515151
 #define t_foreground   #cccccc
