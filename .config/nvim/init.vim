@@ -6,6 +6,7 @@
 call plug#begin()
 
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
 Plug 'wellle/targets.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/neoinclude.vim'
