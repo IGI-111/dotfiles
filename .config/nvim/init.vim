@@ -36,6 +36,8 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
 Plug 'Chiel92/vim-autoformat'
+Plug 'morhetz/gruvbox'
+Plug 'shinchu/lightline-gruvbox.vim'
 
 call plug#end()
 
@@ -66,12 +68,9 @@ autocmd FileType tex setlocal wrap spell
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    set background=dark
-    colorscheme jellybeans
-endif
-
-if &t_Co > 256 || has("gui_running")
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    set background=dark
+    colorscheme gruvbox
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -80,7 +79,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 " neomake options

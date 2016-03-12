@@ -10,53 +10,62 @@
 
 *scrollColor: #45413b
 
-!TomorrowNightEighties
-#define t_background   #151515
-#define t_current_line #393939
-#define t_selection    #515151
-#define t_foreground   #cccccc
-#define t_comment      #999999
-#define t_red          #f2777a
-#define t_orange       #f99157
-#define t_yellow       #ffcc66
-#define t_green        #99cc99
-#define t_aqua         #66cccc
-#define t_blue         #6699cc
-#define t_purple       #cc99cc
+! hard contrast: *background: #1d2021
+*background: #282828
+! soft contrast: *background: #32302f
+*foreground: #ebdbb2
+! Black + DarkGrey
+*color0:  #282828
+*color8:  #928374
+! DarkRed + Red
+*color1:  #cc241d
+*color9:  #fb4934
+! DarkGreen + Green
+*color2:  #98971a
+*color10: #b8bb26
+! DarkYellow + Yellow
+*color3:  #d79921
+*color11: #fabd2f
+! DarkBlue + Blue
+*color4:  #458588
+*color12: #83a598
+! DarkMagenta + Magenta
+*color5:  #b16286
+*color13: #d3869b
+! DarkCyan + Cyan
+*color6:  #689d6a
+*color14: #8ec07c
+! LightGrey + White
+*color7:  #a89984
+*color15: #ebdbb2
 
-
-*foreground:   t_foreground
-*background:   t_background
-*cursorColor:  #aeafad
-
-! Black / Grey
-*color0:       #000000
-*color8:       #666666
-
-! Red / Bright Red
-*color1:       t_red
-*color9:       #FF3334
-
-! Green + Bright Green
-*color2:       t_green
-*color10:      #9ec400
-
-! Yellow (Orange) + Bright Yellow (Yellow)
-*color3:       t_orange
-*color11:      t_yellow
-
-! Blue + Bright Blue
-*color4:       t_blue
-*color12:      t_blue
-
-! Magenta (Purple) + Bright Magenta
-*color5:       t_purple
-*color13:      #b777e0
-
-! Cyan (Aqua) + Bright Cyan
-*color6:       t_aqua
-*color14:      #54ced6
-
-! Light Grey (Selection) + White (Current Line)
-*color7:       t_selection
-*color15:      t_current_line
+URxvt.color24:  #076678
+URxvt.color66:  #427b58
+URxvt.color88:  #9d0006
+URxvt.color96:  #8f3f71
+URxvt.color100: #79740e
+URxvt.color108: #8ec07c
+URxvt.color109: #83a598
+URxvt.color130: #af3a03
+URxvt.color136: #b57614
+URxvt.color142: #b8bb26
+URxvt.color167: #fb4934
+URxvt.color175: #d3869b
+URxvt.color208: #fe8019
+URxvt.color214: #fabd2f
+URxvt.color223: #ebdbb2
+URxvt.color228: #f2e5bc
+URxvt.color229: #fbf1c7
+URxvt.color230: #f9f5d7
+URxvt.color234: #1d2021
+URxvt.color235: #282828
+URxvt.color236: #32302f
+URxvt.color237: #3c3836
+URxvt.color239: #504945
+URxvt.color241: #665c54
+URxvt.color243: #7c6f64
+URxvt.color244: #928374
+URxvt.color245: #928374
+URxvt.color246: #a89984
+URxvt.color248: #bdae93
+URxvt.color250: #d5c4a1
