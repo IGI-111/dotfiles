@@ -1,5 +1,5 @@
-colorscheme molokai
-set defsearch=duckduckgo
+colorscheme gruvbox-dark
+set defsearch=startpage
 set hintchars=qsdfghjklm
 nnoremap h <C-o>
 nnoremap j <Down>
