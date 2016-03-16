@@ -203,7 +203,8 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
-map ù #*             "useful for gn
+map zn <Plug>(incsearch-nohl0):let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hlsearch<CR>
+map czn zncgn
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
