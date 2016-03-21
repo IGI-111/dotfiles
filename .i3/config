@@ -175,5 +175,6 @@ bar {
 exec --no-startup-id feh --randomize --bg-fill /home/igi-111/Backgrounds --no-fehbg
 exec --no-startup-id urxvtd
 #exec --no-startup-id quodlibet
+exec --no-startup-id redshift-gtk
 exec --no-startup-id skype
 exec --no-startup-id sh -c 'STEAM_FRAME_FORCE_CLOSE=1 steam -silent' %U
