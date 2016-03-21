@@ -3,3 +3,5 @@ font=Iosevka Medium 13
 hide_menubar=1
 always_show_tabs=0
 scrollbar_pos=0
+cursor_shape=1
+cursor_blink_mode=2
