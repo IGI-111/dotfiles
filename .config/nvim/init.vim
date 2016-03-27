@@ -5,40 +5,57 @@
 
 call plug#begin()
 
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-abolish'
-Plug 'wellle/targets.vim'
+" Search and easymotion
 Plug 'haya14busa/incsearch.vim'
 Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'Shougo/neoinclude.vim'
-Plug 'itchyny/lightline.vim'
+
+" Git integration
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'airblade/vim-gitgutter'
-"Plug 'mhinz/vim-signify'
+
+" Snippets
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'sjl/gundo.vim'
-Plug 'majutsushi/tagbar'
-Plug 'sheerun/vim-polyglot'
-Plug 'dpwright/vim-tup'
+
+" Motions and general text editing
 Plug 'godlygeek/tabular'
-Plug 'osyo-manga/vim-over'
 Plug 'Tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-surround'
+Plug 'wellle/targets.vim'
+
+" Autocompletion
 Plug 'Shougo/deoplete.nvim'
+" Plug 'Shougo/neoinclude.vim'
+Plug 'zchee/deoplete-clang'
+Plug 'racer-rust/vim-racer'
+
+" Compilation and linting
 Plug 'benekastah/neomake'
 Plug 'vhdirk/vim-cmake'
+Plug 'dpwright/vim-tup'
+
+" Colorschemes
 Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'morhetz/gruvbox'
+
+" Syntax
+Plug 'sheerun/vim-polyglot'
+
+" Interface
+Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'sjl/gundo.vim'
+Plug 'majutsushi/tagbar'
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -246,11 +263,16 @@ set nofoldenable        "dont fold by default
 " ================ Completion =======================
 
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set completeopt-=preview    "no scratch window
 
 " deoplete options
 let g:deoplete#enable_at_startup = 1
 inoremap <silent><expr> <Tab>
             \ pumvisible() ? "\<C-n>" : "<Tab>"
+" deoplete-clang opions
+let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
+let g:deoplete#sources#clang#clang_header ="/usr/include/clang/"
+
 
 " ================ Scrolling ========================
 
