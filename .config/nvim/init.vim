@@ -212,10 +212,16 @@ set hidden
 
 let mapleader = " "
 
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+nnoremap <silent> <C-k> :wincmd k<CR>
+nnoremap <silent> <C-j> :wincmd j<CR>
+nnoremap <silent> <C-h> :wincmd h<CR>
+nnoremap <silent> <C-l> :wincmd l<CR>
+if exists(':tnoremap')
+    tnoremap <silent> <C-k> <Esc>:wincmd k<CR>
+    tnoremap <silent> <C-j> <Esc>:wincmd j<CR>
+    tnoremap <silent> <C-h> <Esc>:wincmd h<CR>
+    tnoremap <silent> <C-l> <Esc>:wincmd l<CR>
+endif
 
 " autocorrect bindings
 map <Leader>z ]s
