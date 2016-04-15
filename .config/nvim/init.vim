@@ -265,17 +265,34 @@ endfunction
 nmap s <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
+" FZF
+let g:fzf_colors =
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
 
 "function keys for addons
 nnoremap <silent> <Leader>u :GundoToggle<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
 nnoremap <silent> <Leader>r :RainbowParenthesesToggle<CR>
 nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>a :Ag<CR>
 noremap <F3> :Autoformat<CR>
 
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
 endif
+
 
 " ================ Search Settings  =================
 
