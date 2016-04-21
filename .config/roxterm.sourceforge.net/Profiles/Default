@@ -5,3 +5,4 @@ always_show_tabs=0
 scrollbar_pos=0
 cursor_shape=0
 cursor_blink_mode=2
+scroll_on_output=1
