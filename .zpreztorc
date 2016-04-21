@@ -26,6 +26,7 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'git' \
   'pacman' \
+  'ssh' \
   'environment' \
   'terminal' \
   'editor' \
