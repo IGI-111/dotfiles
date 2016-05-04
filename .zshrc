@@ -11,5 +11,5 @@ export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -l -g ""'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-. /etc/profile.d/fzf.zsh
+. /usr/share/fzf/key-bindings.zsh
 
