@@ -36,6 +36,7 @@ Plug 'racer-rust/vim-racer'
 Plug 'benekastah/neomake'
 Plug 'vhdirk/vim-cmake'
 Plug 'dpwright/vim-tup'
+Plug 'mikelue/vim-maven-plugin'
 
 " Colorschemes
 Plug 'sjl/badwolf'
@@ -47,15 +48,19 @@ Plug 'morhetz/gruvbox'
 
 " Syntax
 Plug 'sheerun/vim-polyglot'
+Plug 'IGI-111/vim-deca'
+Plug 'dylon/vim-antlr'
 
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-vinegar'
+" Plug 'tpope/vim-vinegar'
+Plug 'dhruvasagar/vim-vinegar'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -204,6 +209,10 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" ANTLR syntax highlighting
+au BufRead,BufNewFile *.g set filetype=antlr3
+au BufRead,BufNewFile *.g4 set filetype=antlr4
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 set hidden
@@ -211,6 +220,11 @@ set hidden
 " ================ Keybindings ======================
 
 let mapleader = " "
+
+if has('nvim')
+  " Hack to get C-h working in NeoVim
+  nmap <BS> <C-W>h
+endif
 
 nnoremap <silent> <C-k> :wincmd k<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
@@ -283,6 +297,7 @@ let g:fzf_colors =
 "function keys for addons
 nnoremap <silent> <Leader>u :GundoToggle<CR>
 nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>r :RainbowParenthesesToggle<CR>
 nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <Leader>f :Files<CR>
