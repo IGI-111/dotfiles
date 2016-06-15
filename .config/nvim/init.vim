@@ -5,10 +5,8 @@
 
 call plug#begin()
 
-" Search and easymotion
+" Search and
 Plug 'haya14busa/incsearch.vim'
-Plug 'haya14busa/incsearch-easymotion.vim'
-Plug 'easymotion/vim-easymotion'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -28,7 +26,6 @@ Plug 'wellle/targets.vim'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
-" Plug 'Shougo/neoinclude.vim'
 Plug 'zchee/deoplete-clang'
 Plug 'racer-rust/vim-racer'
 
@@ -36,7 +33,6 @@ Plug 'racer-rust/vim-racer'
 Plug 'benekastah/neomake'
 Plug 'vhdirk/vim-cmake'
 Plug 'dpwright/vim-tup'
-Plug 'mikelue/vim-maven-plugin'
 
 " Colorschemes
 Plug 'sjl/badwolf'
@@ -55,12 +51,10 @@ Plug 'dylon/vim-antlr'
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kien/rainbow_parentheses.vim'
-" Plug 'tpope/vim-vinegar'
-Plug 'dhruvasagar/vim-vinegar'
+Plug 'tpope/vim-vinegar'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -275,10 +269,6 @@ function! ToggleList(bufname, pfx)
     endif
 endfunction
 
-" easymotion
-nmap s <Plug>(easymotion-s2)
-let g:EasyMotion_smartcase = 1
-
 " FZF
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
@@ -316,9 +306,9 @@ set viminfo='100,f1  "Save up to 100 marks, enable capital marks
 
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
-map /  <Plug>(incsearch-easymotion-/)
-map ?  <Plug>(incsearch-easymotion-?)
-map g/ <Plug>(incsearch-easymotion-stay)
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
 map *  <Plug>(incsearch-nohl-*)
