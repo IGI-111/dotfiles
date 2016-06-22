@@ -220,15 +220,15 @@ if has('nvim')
   nmap <BS> <C-W>h
 endif
 
-nnoremap <silent> <C-k> :wincmd k<CR>
-nnoremap <silent> <C-j> :wincmd j<CR>
-nnoremap <silent> <C-h> :wincmd h<CR>
-nnoremap <silent> <C-l> :wincmd l<CR>
+nnoremap <silent> <C-k> <C-\><C-n><C-w>k
+nnoremap <silent> <C-j> <C-\><C-n><C-w>j
+nnoremap <silent> <C-h> <C-\><C-n><C-w>h
+nnoremap <silent> <C-l> <C-\><C-n><C-w>l
 if exists(':tnoremap')
-    tnoremap <silent> <C-k> <Esc>:wincmd k<CR>
-    tnoremap <silent> <C-j> <Esc>:wincmd j<CR>
-    tnoremap <silent> <C-h> <Esc>:wincmd h<CR>
-    tnoremap <silent> <C-l> <Esc>:wincmd l<CR>
+    tnoremap <silent> <C-k> <C-\><C-n><C-w>k
+    tnoremap <silent> <C-j> <C-\><C-n><C-w>j
+    tnoremap <silent> <C-h> <C-\><C-n><C-w>h
+    tnoremap <silent> <C-l> <C-\><C-n><C-w>l
 endif
 
 " autocorrect bindings
