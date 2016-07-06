@@ -55,6 +55,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
+Plug 'kshenoy/vim-signature'
+Plug 'kassio/neoterm'
 
 call plug#end()
 
@@ -284,11 +286,15 @@ let g:fzf_colors =
             \ 'spinner': ['fg', 'Label'],
             \ 'header':  ['fg', 'Comment'] }
 
+" NeoTerm
+let g:neoterm_size = 10
+let g:neoterm_automap_keys = '<Leader>r'
+
 "function keys for addons
 nnoremap <silent> <Leader>u :GundoToggle<CR>
-nnoremap <silent> <Leader>t :TagbarToggle<CR>
+nnoremap <silent> <Leader>o :TagbarToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>r :RainbowParenthesesToggle<CR>
+nnoremap <silent> <Leader>t :Ttoggle<CR>
 nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>a :Ag<CR>
