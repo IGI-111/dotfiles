@@ -233,6 +233,7 @@ let g:fzf_colors =
 " NeoTerm
 let g:neoterm_size = 10
 let g:neoterm_automap_keys = '<Leader>r'
+let g:neoterm_shell = "zsh"
 
 "function keys for addons
 nnoremap <silent> <Leader>u :GundoToggle<CR>
