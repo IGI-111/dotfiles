@@ -99,19 +99,8 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " airline options
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = ''
 
 " neomake options
 autocmd! BufWritePost * Neomake
