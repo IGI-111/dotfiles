@@ -1,0 +1,18 @@
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[Favorite Profiles]
+Favorites=
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1080=1057
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAB34AAAQhAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1918
+
+[TabBar]
+TabBarVisibility=AlwaysHideTabBar
