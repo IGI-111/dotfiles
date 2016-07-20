@@ -65,7 +65,7 @@ call plug#end()
 
 set number                      "Line numbers are good
 set cursorline                  "Highlight the line the cursor is on
-set colorcolumn=80              "Highlight the character limit
+set colorcolumn=99              "Highlight the character limit
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
