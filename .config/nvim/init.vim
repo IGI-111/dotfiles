@@ -85,7 +85,7 @@ set clipboard=unnamed           "use system clipboard by default
 "LaTeX configuration
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
-autocmd FileType tex setlocal wrap spell
+autocmd FileType tex setlocal wrap spell textwidth=99
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
