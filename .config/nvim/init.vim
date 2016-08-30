@@ -42,10 +42,11 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'morhetz/gruvbox'
 
-" Syntax
+" Syntax and language integration
 Plug 'sheerun/vim-polyglot'
 Plug 'IGI-111/vim-deca'
 Plug 'dylon/vim-antlr'
+Plug 'fatih/vim-go'
 
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
@@ -281,6 +282,8 @@ set shiftwidth=4
 set softtabstop=4
 set tabstop=4
 set expandtab
+
+autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 filetype plugin on
 filetype indent on
