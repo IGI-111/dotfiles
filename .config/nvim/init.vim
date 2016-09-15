@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
+Plug 'justinmk/vim-sneak'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
@@ -59,6 +60,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kshenoy/vim-signature'
 Plug 'kassio/neoterm'
+Plug 'rbong/galvanize.vim'
 
 call plug#end()
 
@@ -127,6 +129,24 @@ let g:neomake_cpp_clangtidy_maker = {
             \ '%E%m',
             \ }
 let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
+
+let g:neomake_rust_clippy_maker = {
+    \ 'exe': 'cargo',
+    \ 'args': ['clippy'],
+    \ 'errorformat':
+        \   '%-Gerror: Could not compile%.%#,'
+        \.  '%-Gerror: aborting due to%.%#,'
+        \.  '%Eerror[%.%#]: %m,%C\\s%#--> %f:%l:%c,'
+        \.  '%Eerror: %m,%C\\s%#--> %f:%l:%c,'
+        \.  '%Wwarning: %m,%C\\s%#--> %f:%l:%c,'
+        \.  '%I\\s%#= help: %m,'
+        \.  '%I\\s%#= note: %m,'
+        \,
+    \ 'append_file': 0,
+    \ }
+
+" Use cargo clippy by default
+let g:neomake_rust_enabled_makers = ['clippy', 'rustc']
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
