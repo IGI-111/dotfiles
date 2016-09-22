@@ -23,6 +23,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
+Plug 'justinmk/vim-sneak'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
