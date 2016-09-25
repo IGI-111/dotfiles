@@ -5,7 +5,7 @@
 
 call plug#begin()
 
-" Search and
+" Search
 Plug 'haya14busa/incsearch.vim'
 
 " Git integration
@@ -40,7 +40,6 @@ Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
-Plug 'Chiel92/vim-autoformat'
 Plug 'morhetz/gruvbox'
 
 " Syntax and language integration
@@ -48,6 +47,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'IGI-111/vim-deca'
 Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
+Plug 'Chiel92/vim-autoformat'
 
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
@@ -91,6 +91,7 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    set termguicolors
     set background=dark
     colorscheme gruvbox
 endif
