@@ -6,7 +6,7 @@ import:
     resume: ask
     quiet_fallback: skip
     timid: no
-plugins: embedart fetchart replaygain
+plugins: embedart fetchart replaygain mbsync discogs
 threaded: yes
 
 paths:
