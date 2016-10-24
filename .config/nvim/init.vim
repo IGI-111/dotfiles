@@ -24,6 +24,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'triglav/vim-visual-increment'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
@@ -90,7 +91,6 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     set termguicolors
     set background=dark
     colorscheme gruvbox
