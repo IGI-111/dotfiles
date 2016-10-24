@@ -61,6 +61,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kshenoy/vim-signature'
 Plug 'kassio/neoterm'
+Plug 'Valloric/ListToggle'
 
 call plug#end()
 
@@ -181,33 +182,6 @@ map Q @q
 vnoremap < <gv
 vnoremap > >gv
 
-function! GetBufferList()
-    redir =>buflist
-    silent! ls!
-    redir END
-    return buflist
-endfunction
-
-function! ToggleList(bufname, pfx)
-    let buflist = GetBufferList()
-    for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
-        if bufwinnr(bufnum) != -1
-            exec(a:pfx.'close')
-            return
-        endif
-    endfor
-    if a:pfx == 'l' && len(getloclist(0)) == 0
-        echohl ErrorMsg
-        echo "Location List is Empty."
-        return
-    endif
-    let winnr = winnr()
-    exec(a:pfx.'open')
-    if winnr() != winnr
-        wincmd p
-    endif
-endfunction
-
 " FZF
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
@@ -233,7 +207,8 @@ nnoremap <silent> <Leader>u :GundoToggle<CR>
 nnoremap <silent> <Leader>o :TagbarToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>t :Ttoggle<CR>
-nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>a :Ag<CR>
 noremap <F3> :Autoformat<CR>
