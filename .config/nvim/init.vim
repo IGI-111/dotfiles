@@ -5,7 +5,7 @@
 
 call plug#begin()
 
-" Search and
+" Search
 Plug 'haya14busa/incsearch.vim'
 
 " Git integration
@@ -24,6 +24,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'triglav/vim-visual-increment'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
@@ -40,7 +41,6 @@ Plug 'sjl/badwolf'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
-Plug 'Chiel92/vim-autoformat'
 Plug 'morhetz/gruvbox'
 
 " Syntax and language integration
@@ -48,6 +48,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'IGI-111/vim-deca'
 Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
+Plug 'Chiel92/vim-autoformat'
 
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
@@ -61,6 +62,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'kshenoy/vim-signature'
 Plug 'kassio/neoterm'
 Plug 'rbong/galvanize.vim'
+Plug 'Valloric/ListToggle'
 
 call plug#end()
 
@@ -83,6 +85,7 @@ set spelllang=fr,en
 set noshowmode                  "Don't show the mode(airline is handling this)
 set mouse=a                     "Mouse in terminal
 set clipboard=unnamed           "use system clipboard by default
+set diffopt+=vertical           "prefer vertical diffs
 
 "LaTeX configuration
 set grepprg=grep\ -nH\ $*
@@ -91,7 +94,7 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    set termguicolors
     set background=dark
     colorscheme gruvbox
 endif
@@ -198,33 +201,6 @@ map Q @q
 vnoremap < <gv
 vnoremap > >gv
 
-function! GetBufferList()
-    redir =>buflist
-    silent! ls!
-    redir END
-    return buflist
-endfunction
-
-function! ToggleList(bufname, pfx)
-    let buflist = GetBufferList()
-    for bufnum in map(filter(split(buflist, '\n'), 'v:val =~ "'.a:bufname.'"'), 'str2nr(matchstr(v:val, "\\d\\+"))')
-        if bufwinnr(bufnum) != -1
-            exec(a:pfx.'close')
-            return
-        endif
-    endfor
-    if a:pfx == 'l' && len(getloclist(0)) == 0
-        echohl ErrorMsg
-        echo "Location List is Empty."
-        return
-    endif
-    let winnr = winnr()
-    exec(a:pfx.'open')
-    if winnr() != winnr
-        wincmd p
-    endif
-endfunction
-
 " FZF
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
@@ -250,7 +226,8 @@ nnoremap <silent> <Leader>u :GundoToggle<CR>
 nnoremap <silent> <Leader>o :TagbarToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>t :Ttoggle<CR>
-nnoremap <silent> <leader>e :call ToggleList("Location List", 'l')<CR>
+let g:lt_location_list_toggle_map = '<leader>l'
+let g:lt_quickfix_list_toggle_map = '<leader>q'
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>a :Ag<CR>
 noremap <F3> :Autoformat<CR>
