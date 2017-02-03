@@ -282,6 +282,7 @@ set tabstop=4
 set expandtab
 
 autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 filetype plugin on
 filetype indent on
