@@ -54,6 +54,10 @@ bindsym $mod+d exec "rofi -show run"
 
 bindsym $mod+Tab exec "rofi -show window"
 
+
+# put system in sleep
+# bindsym $mod+Escape exec "systemctl suspend"
+
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -174,13 +178,10 @@ bar {
     }
 }
 
-gaps inner 25
-smart_gaps on
-
 # Setup the wallpaper
-exec --no-startup-id feh --randomize --bg-fill /home/igi-111/Backgrounds --no-fehbg
+# exec --no-startup-id feh --randomize --bg-fill /home/igi-111/Backgrounds --no-fehbg
 # exec --no-startup-id urxvtd
-exec --no-startup-id skype
-exec --no-startup-id redshift-gtk
-exec --no-startup-id quodlibet
-exec --no-startup-id steam
+exec --no-startup-id ghetto-skype
+# exec --no-startup-id redshift-gtk
+# exec --no-startup-id quodlibet
+exec --no-startup-id STEAM_FRAME_FORCE_CLOSE=1 steam -silent
