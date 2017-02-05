@@ -68,25 +68,26 @@ call plug#end()
 
 " ================ General Config ====================
 
-set number                      "Line numbers are good
-set cursorline                  "Highlight the line the cursor is on
-set colorcolumn=99              "Highlight the character limit
-set backspace=indent,eol,start  "Allow backspace in insert mode
-set history=1000                "Store lots of :cmdline history
-set showcmd                     "Show incomplete cmds down the bottom
-set gcr=a:blinkon0              "Disable cursor blink
-set visualbell                  "No sounds
-set autoread                    "Reload files changed outside vim
-set laststatus=2                "Enabling statusline at all times
+set number                          "Line numbers are good
+set cursorline                      "Highlight the line the cursor is on
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 "Enable cursor shape change
+set colorcolumn=99                  "Highlight the character limit
+set backspace=indent,eol,start      "Allow backspace in insert mode
+set history=1000                    "Store lots of :cmdline history
+set showcmd                         "Show incomplete cmds down the bottom
+set gcr=a:blinkon0                  "Disable cursor blink
+set visualbell                      "No sounds
+set autoread                        "Reload files changed outside vim
+set laststatus=2                    "Enabling statusline at all times
 if &encoding != 'utf-8'
-    set encoding=utf-8          "Necessary to show Unicode glyphs
+    set encoding=utf-8              "Necessary to show Unicode glyphs
 endif
 set spelllang=fr,en
-set noshowmode                  "Don't show the mode(airline is handling this)
-set mouse=a                     "Mouse in terminal
-set clipboard=unnamed           "use system clipboard by default
-set inccommand=nosplit          "use incremental replace
-set diffopt+=vertical           "prefer vertical diffs
+set noshowmode                      "Don't show the mode(airline is handling this)
+set mouse=a                         "Mouse in terminal
+set clipboard=unnamed               "use system clipboard by default
+set inccommand=nosplit              "use incremental replace
+set diffopt+=vertical               "prefer vertical diffs
 
 "LaTeX configuration
 set grepprg=grep\ -nH\ $*
@@ -106,6 +107,8 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " airline options
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 
