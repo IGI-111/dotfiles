@@ -25,6 +25,7 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'triglav/vim-visual-increment'
+Plug 'jiangmiao/auto-pairs'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
