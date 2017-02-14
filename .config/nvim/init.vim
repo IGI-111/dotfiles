@@ -206,6 +206,9 @@ map Q @q
 vnoremap < <gv
 vnoremap > >gv
 
+" AutoPairs
+let g:AutoPairsShortcutJump = '<M-j>'
+
 " FZF
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
