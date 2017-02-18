@@ -154,7 +154,8 @@ let g:neomake_rust_clippy_maker = {
     \ }
 
 " Use cargo clippy by default
-let g:neomake_rust_enabled_makers = ['clippy', 'rustc']
+let g:neomake_rust_enabled_makers = ['clippy']
+autocmd BufWritePost *.rs Neomake! cargo
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
