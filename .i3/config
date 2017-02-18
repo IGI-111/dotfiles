@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 10
+font pango:Fira Sans 11
 
 set $blue #005588
 set $gray1 #333333
@@ -171,15 +171,15 @@ bar {
     position top
     status_command i3status
     colors {
-        statusline #EEEEEE
-        background #0E0E0E
+        statusline #ebdbb2
+        background #282828
         focused_workspace $gray2 $gray2 #FFFFFF
         inactive_workspace $gray1 $gray1 #555555
     }
 }
 
 # Setup the wallpaper
-# exec --no-startup-id feh --randomize --bg-fill /home/igi-111/Backgrounds --no-fehbg
+exec --no-startup-id feh --randomize --bg-fill /home/igi-111/Backgrounds --no-fehbg
 # exec --no-startup-id urxvtd
 exec --no-startup-id ghetto-skype
 # exec --no-startup-id redshift-gtk

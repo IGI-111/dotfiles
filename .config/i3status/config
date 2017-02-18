@@ -7,22 +7,25 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = true
-        interval = 5
+    colors = true
+    interval = 5
+    color_good =     '#b8bb26'
+    color_degraded = '#fabd2f'
+    color_bad =      '#fb4934'
 }
 
 # order += "ipv6"
-# order += "disk /"
+order += "disk /"
 # order += "run_watch DHCP"
 # order += "run_watch VPN"
-# order += "wireless wlp3s0"
+order += "wireless wlp2s0"
 # order += "ethernet enp9s0"
-order += "battery 1"
+order += "battery 0"
 # order += "load"
 order += "tztime local"
 
-wireless wlp3s0 {
-        format_up = "W: (%quality at %essid) %ip"
+wireless wlp2s0 {
+        format_up = "W: %ip (%quality at %essid) %bitrate"
         format_down = "W: down"
 }
 
@@ -32,7 +35,7 @@ ethernet enp9s0 {
         format_down = "E: down"
 }
 
-battery 1 {
+battery 0 {
         format = "%status %percentage %remaining"
         path = "/sys/class/power_supply/BAT%d/uevent"
 }
