@@ -5,9 +5,6 @@ fi
 
 export EDITOR="nvim"
 
-#autoload predict-on
-#predict-on
-
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -18,3 +15,4 @@ function rg-replace() {
 }
 
 alias sucre="yaourt -Suya --noconfirm"
+alias t="todo.sh"
