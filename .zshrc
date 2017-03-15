@@ -4,7 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export EDITOR="nvim"
-
+export GOPATH="$HOME/projects/go"
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -15,4 +15,4 @@ function rg-replace() {
 }
 
 alias sucre="yaourt -Suya --noconfirm"
-alias t="todo.sh"
+alias todo="todo.sh"
