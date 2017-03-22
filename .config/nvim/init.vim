@@ -208,7 +208,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " AutoPairs
-let g:AutoPairsShortcutJump = '<C-k>'
+inoremap <buffer> <silent> <C-k> <ESC>:call AutoPairsJump()<CR>a
 
 " FZF
 let g:fzf_colors =
