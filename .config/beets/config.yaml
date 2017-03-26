@@ -1,12 +1,12 @@
-library: ~/Music/Library.blb
-directory: ~/Music
+library: ~/music/Library.blb
+directory: ~/music
 import:
     copy: yes
     write: yes
     resume: ask
     quiet_fallback: skip
     timid: no
-plugins: embedart fetchart replaygain mbsync discogs
+plugins: embedart fetchart replaygain mbsync
 threaded: yes
 
 paths:
