@@ -4,6 +4,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export EDITOR="nvim"
+export PAGER="less -r"
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
@@ -15,4 +16,5 @@ function rg-replace() {
 }
 
 alias sucre="yaourt -Suya --noconfirm"
+alias yaourt="yaourt --pager --color"
 alias t="todo.sh"
