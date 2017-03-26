@@ -24,7 +24,7 @@ endif
 set spelllang=fr,en
 set noshowmode                      "Don't show the mode(airline is handling this)
 set mouse=a                         "Mouse in terminal
-set clipboard=unnamed               "use system clipboard by default
+set clipboard+=unnamedplus           "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
 
