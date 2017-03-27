@@ -3,69 +3,7 @@
 "  / / _ \/ / __/| |/ / /  ' \
 " /_/_//_/_/\__(_)___/_/_/_/_/
 
-call plug#begin()
-
-" Search
-Plug 'haya14busa/incsearch.vim'
-
-" Git integration
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-
-" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-" Motions and general text editing
-Plug 'godlygeek/tabular'
-Plug 'Tpope/vim-commentary'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-surround'
-Plug 'wellle/targets.vim'
-Plug 'justinmk/vim-sneak'
-Plug 'triglav/vim-visual-increment'
-Plug 'jiangmiao/auto-pairs'
-
-" Autocompletion
-Plug 'Shougo/deoplete.nvim'
-Plug 'zchee/deoplete-clang'
-Plug 'racer-rust/vim-racer'
-
-" Compilation and linting
-Plug 'benekastah/neomake'
-Plug 'vhdirk/vim-cmake'
-Plug 'dpwright/vim-tup'
-
-" Colorschemes
-Plug 'sjl/badwolf'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'nanotech/jellybeans.vim'
-Plug 'morhetz/gruvbox'
-
-" Syntax and language integration
-Plug 'sheerun/vim-polyglot'
-Plug 'IGI-111/vim-deca'
-Plug 'dylon/vim-antlr'
-Plug 'fatih/vim-go'
-Plug 'Chiel92/vim-autoformat'
-
-" Interface
-Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'tpope/vim-vinegar'
-Plug 'sjl/gundo.vim'
-Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'kshenoy/vim-signature'
-Plug 'kassio/neoterm'
-Plug 'rbong/galvanize.vim'
-Plug 'Valloric/ListToggle'
-
-call plug#end()
+source ~/.config/nvim/plugins.vim
 
 " ================ General Config ====================
 
@@ -86,7 +24,7 @@ endif
 set spelllang=fr,en
 set noshowmode                      "Don't show the mode(airline is handling this)
 set mouse=a                         "Mouse in terminal
-set clipboard=unnamed               "use system clipboard by default
+set clipboard+=unnamedplus           "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
 
@@ -114,48 +52,27 @@ let g:airline_powerline_fonts = 1
 let g:airline_skip_empty_sections = 1
 
 " neomake options
-autocmd! BufWritePost * Neomake
-let g:neomake_cpp_clang_maker = {
-            \ 'args': ['-fsyntax-only', '-std=c++14', '-Wall', '-Wextra'],
-            \ 'errorformat':
-            \ '%-G%f:%s:,' .
-            \ '%f:%l:%c: %trror: %m,' .
-            \ '%f:%l:%c: %tarning: %m,' .
-            \ '%f:%l:%c: %m,'.
-            \ '%f:%l: %trror: %m,'.
-            \ '%f:%l: %tarning: %m,'.
-            \ '%f:%l: %m',
-            \ }
-let g:neomake_cpp_clangtidy_maker = {
-            \ 'exe': 'clang-tidy',
-            \ 'args': ['--checks="modernize-*,readability-*,misc-*,clang-analyzer-*"'],
-            \ 'errorformat':
-            \ '%E%f:%l:%c: fatal error: %m,' .
-            \ '%E%f:%l:%c: error: %m,' .
-            \ '%W%f:%l:%c: warning: %m,' .
-            \ '%-G%\m%\%%(LLVM ERROR:%\|No compilation database found%\)%\@!%.%#,' .
-            \ '%E%m',
-            \ }
-let g:neomake_cpp_enabled_makers = ['clang', 'clangtidy']
+source ~/.config/nvim/neomake.vim
 
-let g:neomake_rust_clippy_maker = {
-    \ 'exe': 'cargo',
-    \ 'args': ['clippy'],
-    \ 'errorformat':
-        \   '%-Gerror: Could not compile%.%#,'
-        \.  '%-Gerror: aborting due to%.%#,'
-        \.  '%Eerror[%.%#]: %m,%C\\s%#--> %f:%l:%c,'
-        \.  '%Eerror: %m,%C\\s%#--> %f:%l:%c,'
-        \.  '%Wwarning: %m,%C\\s%#--> %f:%l:%c,'
-        \.  '%I\\s%#= help: %m,'
-        \.  '%I\\s%#= note: %m,'
-        \,
-    \ 'append_file': 0,
-    \ }
+" FZF
+let g:fzf_colors =
+            \ { 'fg':      ['fg', 'Normal'],
+            \ 'bg':      ['bg', 'Normal'],
+            \ 'hl':      ['fg', 'Comment'],
+            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+            \ 'hl+':     ['fg', 'Statement'],
+            \ 'info':    ['fg', 'PreProc'],
+            \ 'prompt':  ['fg', 'Conditional'],
+            \ 'pointer': ['fg', 'Exception'],
+            \ 'marker':  ['fg', 'Keyword'],
+            \ 'spinner': ['fg', 'Label'],
+            \ 'header':  ['fg', 'Comment'] }
 
-" Use cargo clippy by default
-let g:neomake_rust_enabled_makers = ['clippy']
-autocmd BufWritePost *.rs Neomake! cargo
+" NeoTerm
+let g:neoterm_size = 10
+let g:neoterm_automap_keys = '<Leader>r'
+let g:neoterm_shell = "zsh"
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -178,73 +95,7 @@ set hidden
 
 " ================ Keybindings ======================
 
-let mapleader = " "
-
-if has('nvim')
-  " Hack to get C-h working in NeoVim
-  nmap <BS> <C-W>h
-endif
-
-nnoremap <silent> <C-k> <C-\><C-n><C-w>k
-nnoremap <silent> <C-j> <C-\><C-n><C-w>j
-nnoremap <silent> <C-h> <C-\><C-n><C-w>h
-nnoremap <silent> <C-l> <C-\><C-n><C-w>l
-if exists(':tnoremap')
-    tnoremap <silent> <C-k> <C-\><C-n><C-w>k
-    tnoremap <silent> <C-j> <C-\><C-n><C-w>j
-    tnoremap <silent> <C-h> <C-\><C-n><C-w>h
-    tnoremap <silent> <C-l> <C-\><C-n><C-w>l
-endif
-
-" autocorrect bindings
-map <Leader>z ]s
-map <Leader>Z [s
-
-" map Ex mode to last macro
-map Q @q
-
-"map visual shift to shift and reselect
-vnoremap < <gv
-vnoremap > >gv
-
-" AutoPairs
-let g:AutoPairsShortcutJump = '<C-k>'
-
-" FZF
-let g:fzf_colors =
-            \ { 'fg':      ['fg', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
-
-" NeoTerm
-let g:neoterm_size = 10
-let g:neoterm_automap_keys = '<Leader>r'
-let g:neoterm_shell = "zsh"
-
-"function keys for addons
-nnoremap <silent> <Leader>u :GundoToggle<CR>
-nnoremap <silent> <Leader>o :TagbarToggle<CR>
-nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>t :Ttoggle<CR>
-let g:lt_location_list_toggle_map = '<leader>l'
-let g:lt_quickfix_list_toggle_map = '<leader>q'
-nnoremap <silent> <Leader>f :Files<CR>
-nnoremap <silent> <Leader>a :Ag<CR>
-noremap <F3> :Autoformat<CR>
-
-if exists(':tnoremap')
-    tnoremap <Esc> <C-\><C-n>
-endif
-
+source ~/.config/nvim/keybindings.vim
 
 " ================ Search Settings  =================
 
@@ -309,17 +160,7 @@ set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
 
-set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
-set completeopt-=preview    "no scratch window
-
-" deoplete options
-let g:deoplete#enable_at_startup = 1
-inoremap <silent><expr> <Tab>
-            \ pumvisible() ? "\<C-n>" : "<Tab>"
-" deoplete-clang opions
-let g:deoplete#sources#clang#libclang_path = "/usr/lib/libclang.so"
-let g:deoplete#sources#clang#clang_header ="/usr/include/clang/"
-
+source ~/.config/nvim/completion.vim
 
 " ================ Scrolling ========================
 

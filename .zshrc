@@ -5,6 +5,8 @@ fi
 
 export EDITOR="nvim"
 export GOPATH="$HOME/projects/go"
+export PAGER="less -r"
+
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -16,3 +18,5 @@ function rg-replace() {
 
 alias sucre="yaourt -Suya --noconfirm"
 alias todo="todo.sh"
+alias yaourt="yaourt --pager --color"
+alias t="todo.sh"

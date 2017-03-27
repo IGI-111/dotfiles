@@ -17,7 +17,7 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Fira Sans 11
+font pango:Fira Sans Mono 10
 
 set $blue #005588
 set $gray1 #333333
@@ -40,7 +40,7 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec roxterm
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -179,7 +179,7 @@ bar {
 }
 
 # Setup the wallpaper
-exec --no-startup-id feh --randomize --bg-fill /home/igi-111/Backgrounds --no-fehbg
+exec --no-startup-id feh --randomize --bg-fill /home/igi-111/backgrounds --no-fehbg
 # exec --no-startup-id urxvtd
 exec --no-startup-id ghetto-skype
 # exec --no-startup-id redshift-gtk
