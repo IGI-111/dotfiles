@@ -20,6 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'triglav/vim-visual-increment'
+Plug 'matze/vim-move'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
