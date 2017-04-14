@@ -23,10 +23,11 @@ Plug 'triglav/vim-visual-increment'
 Plug 'matze/vim-move'
 
 " Autocompletion
-Plug 'Shougo/deoplete.nvim'
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'zchee/deoplete-clang'
-Plug 'carlitux/deoplete-ternjs'
+Plug 'roxma/nvim-completion-manager'
+Plug 'racer-rust/vim-racer'
+Plug 'roxma/nvim-cm-racer'
+Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+Plug 'autozimu/LanguageClient-neovim'
 
 " Compilation and linting
 Plug 'benekastah/neomake'
@@ -41,10 +42,14 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
 
 " Syntax and language integration
-Plug 'sheerun/vim-polyglot'
 Plug 'IGI-111/vim-deca'
+Plug 'leafgarland/typescript-vim'
 Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+" Formatting
 Plug 'Chiel92/vim-autoformat'
 
 

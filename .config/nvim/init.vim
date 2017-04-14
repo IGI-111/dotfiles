@@ -35,7 +35,7 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    set termguicolors
+    " set termguicolors
     set background=dark
     colorscheme gruvbox
 endif
