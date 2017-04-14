@@ -38,5 +38,4 @@ let g:neomake_rust_clippy_maker = {
     \ }
 
 " Use cargo clippy by default
-let g:neomake_rust_enabled_makers = ['clippy']
-autocmd BufWritePost *.rs Neomake! cargo
+let g:neomake_rust_enabled_makers = ['cargo', 'clippy']
