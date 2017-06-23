@@ -23,11 +23,14 @@ Plug 'triglav/vim-visual-increment'
 Plug 'matze/vim-move'
 
 " Autocompletion
-Plug 'roxma/nvim-completion-manager'
+Plug 'Shougo/deoplete.nvim'
+Plug 'carlitux/deoplete-ternjs'
 Plug 'racer-rust/vim-racer'
-Plug 'roxma/nvim-cm-racer'
-Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
-Plug 'autozimu/LanguageClient-neovim'
+Plug 'zchee/deoplete-clang'
+" Plug 'roxma/nvim-completion-manager'
+" Plug 'roxma/nvim-cm-racer'
+" Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+" Plug 'autozimu/LanguageClient-neovim'
 
 " Compilation and linting
 Plug 'benekastah/neomake'
@@ -48,6 +51,8 @@ Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tweekmonster/django-plus.vim'
+Plug 'Shougo/echodoc.vim'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
@@ -60,11 +65,13 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'kassio/neoterm'
 Plug 'rbong/galvanize.vim'
 Plug 'Valloric/ListToggle'
+Plug 'equalsraf/neovim-gui-shim'
 
 call plug#end()

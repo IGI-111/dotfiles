@@ -9,7 +9,6 @@ source ~/.config/nvim/plugins.vim
 
 set number                          "Line numbers are good
 set cursorline                      "Highlight the line the cursor is on
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 "Enable cursor shape change
 set colorcolumn=99                  "Highlight the character limit
 set backspace=indent,eol,start      "Allow backspace in insert mode
 set history=1000                    "Store lots of :cmdline history
@@ -27,6 +26,10 @@ set mouse=a                         "Mouse in terminal
 set clipboard+=unnamedplus           "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
+"Enable cursor shape change
+:set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+            \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+            \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 "LaTeX configuration
 set grepprg=grep\ -nH\ $*
@@ -86,6 +89,10 @@ function! s:fzf_statusline()
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
+
+" Lightline
+let g:lightline = {}
+let g:lightline.colorscheme = 'gruvbox'
 
 " NeoTerm
 let g:neoterm_size = 10
@@ -160,6 +167,8 @@ set expandtab
 
 autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 filetype plugin on
 filetype indent on
@@ -188,3 +197,4 @@ set sidescroll=1
 
 " ================ GUI Options ======================
 set guioptions=aegimrLt
+let g:gonvim_draw_statusline = 0
