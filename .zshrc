@@ -6,6 +6,7 @@ fi
 export EDITOR="nvim"
 export GOPATH="$HOME/projects/go"
 export PAGER="less -r"
+export XKB_DEFAULT_LAYOUT=fr
 
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
@@ -18,5 +19,4 @@ function rg-replace() {
 
 alias sucre="yaourt -Suya --noconfirm"
 alias todo="todo.sh"
-alias yaourt="yaourt --pager --color"
 alias t="todo.sh"

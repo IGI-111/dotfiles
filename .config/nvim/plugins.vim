@@ -21,6 +21,7 @@ Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'triglav/vim-visual-increment'
 Plug 'matze/vim-move'
+Plug 'tpope/vim-sleuth'
 
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
@@ -33,7 +34,8 @@ Plug 'zchee/deoplete-clang'
 " Plug 'autozimu/LanguageClient-neovim'
 
 " Compilation and linting
-Plug 'benekastah/neomake'
+" Plug 'benekastah/neomake'
+Plug 'w0rp/ale'
 Plug 'vhdirk/vim-cmake'
 Plug 'dpwright/vim-tup'
 
