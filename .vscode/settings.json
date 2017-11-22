@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Gruvbox Dark (Medium)",
+    "editor.codeLens": false,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+    "csharp.format.enable": false,
+    "workbench.activityBar.visible": false,
+    "editor.tabCompletion": true,
+    "editor.fontFamily": "Iosevka, 'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "window.menuBarVisibility": "default",
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#282828",
+        "statusBar.noFolderBackground": "#282828",
+        "statusBar.debuggingBackground": "#282828"
+    },
+    "clang.completion.enable": true,
+    "clang.diagnostic.enable": true
+}
