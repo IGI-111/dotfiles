@@ -40,7 +40,7 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 if &t_Co >= 256 || has("gui_running")
     " set termguicolors
     set background=dark
-    colorscheme gruvbox
+    colorscheme darcula
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -92,7 +92,7 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 " Lightline
 let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+let g:lightline.colorscheme = 'darcula'
 
 " NeoTerm
 let g:neoterm_size = 10

@@ -45,10 +45,11 @@ Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
+Plug 'blueshirts/darcula'
 
 " Syntax and language integration
+Plug 'sheerun/vim-polyglot'
 Plug 'IGI-111/vim-deca'
-Plug 'leafgarland/typescript-vim'
 Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
