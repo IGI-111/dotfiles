@@ -13,4 +13,9 @@ let g:deoplete#sources#clang#clang_header ="/usr/include/clang/"
 let g:deoplete#sources#rust#racer_binary="/usr/bin/racer"
 let g:deoplete#sources#rust#rust_source_path="/usr/src/rust/src/"
 
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+  endif
+let g:deoplete#omni#input_patterns.tex = g:vimtex#re#deoplete
+
 set completeopt-=preview

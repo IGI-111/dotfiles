@@ -32,6 +32,7 @@ set diffopt+=vertical               "prefer vertical diffs
             \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 "LaTeX configuration
+let g:polyglot_disabled = ['latex']
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 autocmd FileType tex setlocal wrap spell textwidth=99

@@ -49,6 +49,7 @@ Plug 'blueshirts/darcula'
 
 " Syntax and language integration
 Plug 'sheerun/vim-polyglot'
+Plug 'lervag/vimtex'
 Plug 'IGI-111/vim-deca'
 Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
