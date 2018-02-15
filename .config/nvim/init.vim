@@ -41,7 +41,7 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 if &t_Co >= 256 || has("gui_running")
     " set termguicolors
     set background=dark
-    colorscheme darcula
+    colorscheme PaperColor
 endif
 
 if &t_Co > 2 || has("gui_running")
@@ -96,9 +96,10 @@ let g:lightline = {}
 let g:lightline.colorscheme = 'darcula'
 
 " NeoTerm
-let g:neoterm_size = 10
+let g:neoterm_size = 55
 let g:neoterm_automap_keys = '<Leader>r'
 let g:neoterm_shell = "zsh"
+let g:neoterm_position = 'vertical'
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"

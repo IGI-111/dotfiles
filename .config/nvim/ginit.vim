@@ -1,1 +1,1 @@
-call GuiFont("Iosevka Term Medium:h16")
+call rpcnotify(1, 'Gui', 'Font', 'Fira Code 12')
