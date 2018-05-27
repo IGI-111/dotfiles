@@ -46,6 +46,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
 Plug 'blueshirts/darcula'
+Plug 'atelierbram/vim-colors_atelier-schemes'
 
 " Syntax and language integration
 Plug 'sheerun/vim-polyglot'

@@ -41,7 +41,7 @@ autocmd FileType tex setlocal wrap spell textwidth=99
 if &t_Co >= 256 || has("gui_running")
     " set termguicolors
     set background=dark
-    colorscheme PaperColor
+    colorscheme Atelier_ForestDark
 endif
 
 if &t_Co > 2 || has("gui_running")
