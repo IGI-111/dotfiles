@@ -92,14 +92,13 @@ endfunction
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 " Lightline
-let g:lightline = {}
-let g:lightline.colorscheme = 'darcula'
+let g:lightline = {
+      \ 'colorscheme': 'Atelier_Forest',
+      \ }
 
 " NeoTerm
-let g:neoterm_size = 55
-let g:neoterm_automap_keys = '<Leader>r'
-let g:neoterm_shell = "zsh"
-let g:neoterm_position = 'vertical'
+let g:neoterm_automap_keys = '<Leader>t'
+let g:neoterm_default_mod = 'vertical'
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
