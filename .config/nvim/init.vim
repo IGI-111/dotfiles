@@ -23,13 +23,9 @@ endif
 set spelllang=fr,en
 set noshowmode                      "Don't show the mode(airline is handling this)
 set mouse=a                         "Mouse in terminal
-set clipboard+=unnamedplus           "use system clipboard by default
+set clipboard+=unnamedplus          "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
-"Enable cursor shape change
-:set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
-            \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
-            \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 "LaTeX configuration
 let g:polyglot_disabled = ['latex']
@@ -37,26 +33,22 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 autocmd FileType tex setlocal wrap spell textwidth=99
 
-"Setting the colorscheme
-if &t_Co >= 256 || has("gui_running")
-    " set termguicolors
-    set background=dark
-    colorscheme Atelier_ForestDark
-endif
-
 if &t_Co > 2 || has("gui_running")
     "switch syntax highlighting on, when the terminal has colors
     syntax on
 endif
 
-" airline options
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_powerline_fonts = 1
-let g:airline_skip_empty_sections = 1
+"Setting the colorscheme
+if &t_Co >= 256 || has("gui_running")
+    set termguicolors
+    set background=dark
+    colorscheme gruvbox
+endif
 
-" neomake options
-" source ~/.config/nvim/neomake.vim
+" Lightline
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ }
 
 " FZF
 let g:fzf_colors =
@@ -91,11 +83,6 @@ endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
-" Lightline
-let g:lightline = {
-      \ 'colorscheme': 'Atelier_Forest',
-      \ }
-
 " NeoTerm
 let g:neoterm_automap_keys = '<Leader>t'
 let g:neoterm_default_mod = 'vertical'
@@ -111,10 +98,6 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-" ANTLR syntax highlighting
-au BufRead,BufNewFile *.g set filetype=antlr3
-au BufRead,BufNewFile *.g4 set filetype=antlr4
-
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 set hidden
@@ -127,21 +110,6 @@ source ~/.config/nvim/keybindings.vim
 
 set incsearch        "Find the next match as we type the search
 set viminfo='100,f1  "Save up to 100 marks, enable capital marks
-
-set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
-
-map zn <Plug>(incsearch-nohl0):let @/='\<<C-R>=expand("<cword>")<CR>\>'<CR>:set hlsearch<CR>
-map czn zncgn
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
@@ -161,15 +129,6 @@ set undofile
 set autoindent
 set smartindent
 set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
-
-autocmd Filetype go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
-autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 filetype plugin on
 filetype indent on
@@ -195,7 +154,3 @@ source ~/.config/nvim/completion.vim
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
-
-" ================ GUI Options ======================
-set guioptions=aegimrLt
-let g:gonvim_draw_statusline = 0
