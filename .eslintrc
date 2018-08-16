@@ -1,3 +1,6 @@
 {
-  "extends": "semistandard"
+  "extends": "semistandard-react",
+    "rules": {
+      "semistandard-react/prop-types": 0
+    }
 }
