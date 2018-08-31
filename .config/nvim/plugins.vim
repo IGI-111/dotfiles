@@ -26,7 +26,7 @@ Plug 'tpope/vim-sleuth'
 " Autocompletion
 Plug 'Shougo/deoplete.nvim'
 Plug 'carlitux/deoplete-ternjs'
-Plug 'racer-rust/vim-racer'
+Plug 'sebastianmarkow/deoplete-rust'
 Plug 'zchee/deoplete-clang'
 " Plug 'roxma/nvim-completion-manager'
 " Plug 'roxma/nvim-cm-racer'
