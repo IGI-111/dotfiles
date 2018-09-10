@@ -10,10 +10,6 @@ function rg-replace() {
   rg -l $1 | xargs sed -ri -e "s/$1/$2/g"
 }
 
-function sucre() {
-  yaourt -Suya --noconfirm $*
-}
-
 function v() {
   nvim $*
 }

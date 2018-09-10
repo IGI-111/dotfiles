@@ -80,7 +80,7 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 #
 
 # Set the Pacman frontend.
-zstyle ':prezto:module:pacman' frontend 'yaourt'
+zstyle ':prezto:module:pacman' frontend 'yay'
 
 #
 # Prompt
