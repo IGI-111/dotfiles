@@ -19,6 +19,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'unblevable/quick-scope'
 Plug 'triglav/vim-visual-increment'
 Plug 'matze/vim-move'
 Plug 'tpope/vim-sleuth'
@@ -30,7 +31,7 @@ Plug 'sebastianmarkow/deoplete-rust'
 Plug 'zchee/deoplete-clang'
 " Plug 'roxma/nvim-completion-manager'
 " Plug 'roxma/nvim-cm-racer'
-" Plug 'roxma/nvim-cm-tern',  {'do': 'npm install'}
+" Plug 'roxma/nvim-cm-tern',  {'do': 'npm insgall'}
 " Plug 'autozimu/LanguageClient-neovim'
 
 " Compilation and linting
