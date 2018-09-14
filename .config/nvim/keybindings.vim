@@ -41,3 +41,5 @@ noremap <F3> :Autoformat<CR>
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>
 endif
+
+nnoremap <silent> // :noh<CR>
