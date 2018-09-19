@@ -59,6 +59,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tweekmonster/django-plus.vim'
 Plug 'Shougo/echodoc.vim'
+Plug 'ekalinin/Dockerfile.vim'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
