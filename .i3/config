@@ -183,7 +183,7 @@ bar {
 # Setup the wallpaper
 exec --no-startup-id nitrogen --restore
 # exec --no-startup-id urxvtd
-exec --no-startup-id ghetto-skype
+# exec --no-startup-id ghetto-skype
 # exec --no-startup-id redshift-gtk
 # exec --no-startup-id quodlibet
-exec --no-startup-id STEAM_FRAME_FORCE_CLOSE=1 steam -silent
+# exec --no-startup-id STEAM_FRAME_FORCE_CLOSE=1 steam -silent
