@@ -18,13 +18,15 @@ general {
 order += "disk /"
 # order += "run_watch DHCP"
 # order += "run_watch VPN"
-order += "wireless wlp2s0"
+order += "wireless wlp58s0"
+order += "path_exists VPN"
 # order += "ethernet enp9s0"
 order += "battery 0"
 # order += "load"
 order += "tztime local"
 
-wireless wlp2s0 {
+
+wireless wlp58s0 {
         format_up = "W: %ip (%quality at %essid) %bitrate"
         format_down = "W: down"
 }
@@ -44,10 +46,6 @@ run_watch DHCP {
         pidfile = "/var/run/dhcpcd*.pid"
 }
 
-run_watch VPN {
-        pidfile = "/var/run/vpnc/pid"
-}
-
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
@@ -58,4 +56,8 @@ load {
 
 disk "/" {
         format = "%avail"
+}
+
+path_exists VPN {
+     path = "/proc/sys/net/ipv4/conf/tun0"
 }
