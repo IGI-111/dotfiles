@@ -3,6 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+fpath+=~/.zfunc
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . /usr/share/fzf/key-bindings.zsh
 
