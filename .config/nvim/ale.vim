@@ -8,3 +8,5 @@ let g:ale_completion_enabled = 1
 nnoremap <silent> K :ALEHover<CR>
 nnoremap <silent> gd :ALEGoToDefinition<CR>
 nnoremap <silent> <F2> :ALEFindReferences<CR>
+
+let g:ale_linters = {'rust': ['rls', 'cargo']}
