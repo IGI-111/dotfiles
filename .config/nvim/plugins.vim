@@ -25,20 +25,20 @@ Plug 'matze/vim-move'
 Plug 'tpope/vim-sleuth'
 
 " Autocompletion
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 Plug 'Shougo/deoplete.nvim'
-Plug 'carlitux/deoplete-ternjs'
-Plug 'sebastianmarkow/deoplete-rust'
-Plug 'zchee/deoplete-clang'
+" Plug 'carlitux/deoplete-ternjs'
+" Plug 'sebastianmarkow/deoplete-rust'
+" Plug 'zchee/deoplete-clang'
+
 " Plug 'roxma/nvim-completion-manager'
 " Plug 'roxma/nvim-cm-racer'
 " Plug 'roxma/nvim-cm-tern',  {'do': 'npm insgall'}
-" Plug 'autozimu/LanguageClient-neovim'
 
-" Compilation and linting
-" Plug 'benekastah/neomake'
 Plug 'w0rp/ale'
-Plug 'vhdirk/vim-cmake'
-Plug 'dpwright/vim-tup'
 
 " Colorschemes
 Plug 'sjl/badwolf'
@@ -60,6 +60,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tweekmonster/django-plus.vim'
 Plug 'Shougo/echodoc.vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'modille/groovy.vim'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'

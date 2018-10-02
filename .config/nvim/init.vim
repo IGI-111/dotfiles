@@ -59,6 +59,14 @@ let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ }
 
+" LanguageClient
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['rls'],
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['javascript-typescript-stdio'],
+    \ 'python': ['pyls2'],
+    \ }
+
 " FZF
 let g:fzf_colors =
             \ { 'fg':      ['fg', 'Normal'],
@@ -138,6 +146,10 @@ set undofile
 set autoindent
 set smartindent
 set smarttab
+
+set shiftwidth=4
+set tabstop=4
+set noexpandtab
 
 filetype plugin on
 filetype indent on
