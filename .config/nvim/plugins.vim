@@ -1,8 +1,5 @@
 call plug#begin()
 
-" Search
-Plug 'haya14busa/incsearch.vim'
-
 " Git integration
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -18,26 +15,12 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-surround'
 Plug 'wellle/targets.vim'
-Plug 'justinmk/vim-sneak'
 Plug 'unblevable/quick-scope'
 Plug 'triglav/vim-visual-increment'
 Plug 'matze/vim-move'
 Plug 'tpope/vim-sleuth'
 
 " Autocompletion
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-Plug 'Shougo/deoplete.nvim'
-" Plug 'carlitux/deoplete-ternjs'
-" Plug 'sebastianmarkow/deoplete-rust'
-" Plug 'zchee/deoplete-clang'
-
-" Plug 'roxma/nvim-completion-manager'
-" Plug 'roxma/nvim-cm-racer'
-" Plug 'roxma/nvim-cm-tern',  {'do': 'npm insgall'}
-
 Plug 'w0rp/ale'
 
 " Colorschemes
@@ -53,7 +36,6 @@ Plug 'atelierbram/vim-colors_atelier-schemes'
 Plug 'sheerun/vim-polyglot'
 Plug 'lervag/vimtex'
 Plug 'IGI-111/vim-deca'
-Plug 'dylon/vim-antlr'
 Plug 'fatih/vim-go'
 Plug 'rust-lang/rust.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -64,7 +46,6 @@ Plug 'modille/groovy.vim'
 
 " Formatting
 Plug 'Chiel92/vim-autoformat'
-
 
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }

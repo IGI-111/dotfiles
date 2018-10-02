@@ -168,7 +168,7 @@ set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
 
-source ~/.config/nvim/completion.vim
+source ~/.config/nvim/ale.vim
 
 " ================ Scrolling ========================
 
