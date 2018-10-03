@@ -1,0 +1,6 @@
+colorscheme gruvbox
+
+# enable kak-lsp
+eval %sh{kak-lsp --kakoune -s $kak_session}
+
+add-highlighter global/ number-lines
