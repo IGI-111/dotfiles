@@ -133,6 +133,9 @@ zstyle ':prezto:module:prompt' theme 'steeef'
 #   'builtin' 'bg=blue' \
 #   'command' 'bg=blue' \
 #   'function' 'bg=blue'
+#
+
+zstyle ':prezto:module:utility' safe-ops 'no'.
 
 #
 # Terminal
