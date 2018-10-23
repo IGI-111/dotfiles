@@ -16,6 +16,11 @@ if exists(':tnoremap')
     tnoremap <silent> <C-l> <C-\><C-n><C-w>l
 endif
 
+autocmd TermOpen * setlocal nonumber
+autocmd TermOpen * startinsert
+autocmd BufEnter term://* startinsert
+
+
 " autocorrect bindings
 map <Leader>z ]s
 map <Leader>Z [s
