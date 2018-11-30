@@ -40,7 +40,7 @@ new_window 1pixel
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec qterminal
 
 # kill focused window
 bindsym $mod+Shift+a kill
@@ -131,6 +131,9 @@ bindsym $mod+Shift+egrave move container to workspace 7
 bindsym $mod+Shift+underscore move container to workspace 8
 bindsym $mod+Shift+ccedilla move container to workspace 9
 bindsym $mod+Shift+agrave move container to workspace 10
+
+# move workspace to next output
+bindsym $mod+x move workspace to output up
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
