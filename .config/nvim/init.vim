@@ -6,7 +6,6 @@
 source ~/.config/nvim/plugins.vim
 
 " ================ General Config ====================
-
 set number                          "Line numbers are good
 set cursorline                      "Highlight the line the cursor is on
 set colorcolumn=99                  "Highlight the character limit
@@ -18,7 +17,7 @@ set visualbell                      "No sounds
 set autoread                        "Reload files changed outside vim
 set laststatus=2                    "Enabling statusline at all times
 if &encoding != 'utf-8'
-    set encoding=utf-8              "Necessary to show Unicode glyphs
+  set encoding=utf-8              "Necessary to show Unicode glyphs
 endif
 set spelllang=fr,en
 set noshowmode                      "Don't show the mode(airline is handling this)
@@ -34,8 +33,8 @@ let g:tex_flavor = "latex"
 autocmd FileType tex setlocal wrap spell textwidth=99
 
 if &t_Co > 2 || has("gui_running")
-    "switch syntax highlighting on, when the terminal has colors
-    syntax on
+  "switch syntax highlighting on, when the terminal has colors
+  syntax on
 endif
 
 " quick-scope
@@ -49,9 +48,9 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 "Setting the colorscheme
 if &t_Co >= 256 || has("gui_running")
-    set termguicolors
-    set background=dark
-    colorscheme gruvbox
+  set termguicolors
+  set background=dark
+  colorscheme gruvbox
 endif
 
 " Lightline
@@ -59,28 +58,42 @@ let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ }
 
+let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
+      \ }
+let g:lightline.component_type = {
+      \  'linter_checking': 'left',
+      \  'linter_warnings': 'warning',
+      \  'linter_errors': 'error',
+      \  'linter_ok': 'left',
+      \ }
+let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings']] }
+
 " FZF
 let g:fzf_colors =
-            \ { 'fg':      ['fg', 'Normal'],
-            \ 'bg':      ['bg', 'Normal'],
-            \ 'hl':      ['fg', 'Comment'],
-            \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-            \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-            \ 'hl+':     ['fg', 'Statement'],
-            \ 'info':    ['fg', 'PreProc'],
-            \ 'prompt':  ['fg', 'Conditional'],
-            \ 'pointer': ['fg', 'Exception'],
-            \ 'marker':  ['fg', 'Keyword'],
-            \ 'spinner': ['fg', 'Label'],
-            \ 'header':  ['fg', 'Comment'] }
+      \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
 
 " add Rg command for ripgrep
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
 
 function! s:fzf_statusline()
   " Override statusline as you like

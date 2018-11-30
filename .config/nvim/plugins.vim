@@ -22,6 +22,7 @@ Plug 'tpope/vim-sleuth'
 
 " Autocompletion
 Plug 'w0rp/ale'
+" Plug 'zxqfl/tabnine-vim'
 
 " Colorschemes
 Plug 'sjl/badwolf'
@@ -55,6 +56,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'sjl/gundo.vim'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
+Plug 'maximbaz/lightline-ale'
 Plug 'kshenoy/vim-signature'
 Plug 'kassio/neoterm'
 Plug 'rbong/galvanize.vim'
