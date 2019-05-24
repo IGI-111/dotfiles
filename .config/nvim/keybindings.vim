@@ -9,16 +9,8 @@ nnoremap <silent> <C-k> <C-\><C-n><C-w>k
 nnoremap <silent> <C-j> <C-\><C-n><C-w>j
 nnoremap <silent> <C-h> <C-\><C-n><C-w>h
 nnoremap <silent> <C-l> <C-\><C-n><C-w>l
-if exists(':tnoremap')
-    tnoremap <silent> <C-k> <C-\><C-n><C-w>k
-    tnoremap <silent> <C-j> <C-\><C-n><C-w>j
-    tnoremap <silent> <C-h> <C-\><C-n><C-w>h
-    tnoremap <silent> <C-l> <C-\><C-n><C-w>l
-endif
 
 autocmd TermOpen * setlocal nonumber
-autocmd TermOpen * startinsert
-autocmd BufEnter term://* startinsert
 
 
 " autocorrect bindings
