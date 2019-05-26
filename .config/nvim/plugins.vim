@@ -22,7 +22,7 @@ Plug 'tpope/vim-sleuth'
 
 " Autocompletion
 Plug 'w0rp/ale'
-" Plug 'zxqfl/tabnine-vim'
+Plug 'zxqfl/tabnine-vim'
 
 " Colorschemes
 Plug 'sjl/badwolf'
