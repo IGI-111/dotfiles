@@ -1,8 +1,4 @@
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
+let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 0
 call ale#Set('rust_cargo_use_clippy', 1)
 

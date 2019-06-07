@@ -22,7 +22,10 @@ Plug 'tpope/vim-sleuth'
 
 " Autocompletion
 Plug 'w0rp/ale'
-Plug 'zxqfl/tabnine-vim'
+" Plug 'zxqfl/tabnine-vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 
 " Colorschemes
 Plug 'sjl/badwolf'

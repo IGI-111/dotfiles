@@ -53,12 +53,12 @@ autocmd BufWritePost * GitGutter
 if &t_Co >= 256 || has("gui_running")
   set termguicolors
   set background=dark
-  colorscheme jellybeans
+  colorscheme gruvbox
 endif
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'gruvbox',
       \ }
 
 let g:lightline.component_expand = {
@@ -176,6 +176,7 @@ set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
 
+source ~/.config/nvim/coc.vim
 source ~/.config/nvim/ale.vim
 
 " ================ Scrolling ========================
