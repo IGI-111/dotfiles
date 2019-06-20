@@ -33,7 +33,6 @@ let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
-noremap <F3> :Autoformat<CR>
 
 if exists(':tnoremap')
     tnoremap <Esc> <C-\><C-n>

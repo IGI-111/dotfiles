@@ -25,6 +25,7 @@ set mouse=a                         "Mouse in terminal
 set clipboard+=unnamedplus          "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
+set shortmess=I                     "disable start message
 
 "LaTeX configuration
 let g:polyglot_disabled = ['latex']
@@ -74,6 +75,7 @@ let g:lightline.component_type = {
       \  'linter_ok': 'left',
       \ }
 let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings']] }
+
 
 " FZF
 let g:fzf_colors =

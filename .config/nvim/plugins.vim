@@ -48,9 +48,6 @@ Plug 'Shougo/echodoc.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'modille/groovy.vim'
 
-" Formatting
-Plug 'Chiel92/vim-autoformat'
-
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
