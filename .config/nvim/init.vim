@@ -125,6 +125,14 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" quickfix window
+augroup QuickFix
+  autocmd!
+  autocmd FileType qf setlocal wrap
+augroup END
+hi QuickFixLine ctermbg=None
+
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 set hidden
