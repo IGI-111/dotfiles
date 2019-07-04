@@ -25,7 +25,7 @@ set mouse=a                         "Mouse in terminal
 set clipboard+=unnamedplus          "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
-set shortmess=I                     "disable start message
+set shortmess=OtI                   "disable start message
 
 "LaTeX configuration
 let g:polyglot_disabled = ['latex']
