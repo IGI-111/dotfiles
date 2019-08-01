@@ -14,5 +14,6 @@ let g:ale_linters = {
 let g:ale_fixers = {
 \ 'typescript': ['prettier', 'eslint'],
 \ 'javascript': ['prettier', 'eslint'],
+\ 'haskell': ['brittany'],
 \ 'rust': ['rustfmt']
 \}
