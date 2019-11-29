@@ -25,7 +25,7 @@ set mouse=a                         "Mouse in terminal
 set clipboard+=unnamedplus          "use system clipboard by default
 set inccommand=nosplit              "use incremental replace
 set diffopt+=vertical               "prefer vertical diffs
-set shortmess=I                     "disable start message
+set shortmess=OtI                   "disable start message
 
 "LaTeX configuration
 let g:polyglot_disabled = ['latex']
@@ -124,6 +124,14 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" quickfix window
+augroup QuickFix
+  autocmd!
+  autocmd FileType qf setlocal wrap
+augroup END
+hi QuickFixLine ctermbg=None
+
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
