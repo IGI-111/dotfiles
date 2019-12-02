@@ -113,6 +113,8 @@ autocmd! User FzfStatusLine call <SID>fzf_statusline()
 " NeoTerm
 let g:neoterm_automap_keys = '<Leader>t'
 let g:neoterm_default_mod = 'vertical'
+let g:neoterm_size = 50
+let g:neoterm_fixed_size = 1
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"
@@ -132,10 +134,6 @@ augroup QuickFix
 augroup END
 hi QuickFixLine ctermbg=None
 
-
-" This makes vim act like all other editors, buffers can
-" exist in the background without being in a window.
-set hidden
 
 " ================ Keybindings ======================
 
