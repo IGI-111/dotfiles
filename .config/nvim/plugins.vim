@@ -48,6 +48,7 @@ Plug 'tweekmonster/django-plus.vim'
 Plug 'Shougo/echodoc.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'modille/groovy.vim'
+Plug 'ocaml/vim-ocaml'
 
 " Interface
 Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
