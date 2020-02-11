@@ -55,7 +55,7 @@ Plug 'junegunn/fzf', { 'dir' : '~/.fzf', 'do' : './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'tpope/vim-vinegar'
-Plug 'sjl/gundo.vim'
+Plug 'simnalamburt/vim-mundo'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'

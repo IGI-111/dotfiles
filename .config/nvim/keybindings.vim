@@ -25,7 +25,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 "function keys for addons
-nnoremap <silent> <Leader>u :GundoToggle<CR>
+nnoremap <silent> <Leader>u :MundoToggle<CR>
 nnoremap <silent> <Leader>o :TagbarToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>t :Ttoggle<CR>
