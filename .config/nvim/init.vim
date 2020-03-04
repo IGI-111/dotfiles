@@ -53,12 +53,12 @@ autocmd BufWritePost * GitGutter
 if &t_Co >= 256 || has("gui_running")
   set termguicolors
   set background=dark
-  colorscheme gruvbox
+  colorscheme palenight
 endif
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'palenight',
       \ }
 
 let g:lightline.component_expand = {

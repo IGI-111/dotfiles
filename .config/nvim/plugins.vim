@@ -36,6 +36,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
 Plug 'blueshirts/darcula'
 Plug 'atelierbram/vim-colors_atelier-schemes'
+Plug 'drewtempelmeyer/palenight.vim'
 
 " Syntax and language integration
 Plug 'sheerun/vim-polyglot'

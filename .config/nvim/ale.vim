@@ -15,5 +15,7 @@ let g:ale_fixers = {
 \ 'typescript': ['prettier', 'eslint'],
 \ 'javascript': ['prettier', 'eslint'],
 \ 'haskell': ['brittany'],
-\ 'rust': ['rustfmt']
+\ 'rust': ['rustfmt'],
+\ 'ocaml': ['ocamlformat']
 \}
+let g:ale_javascript_prettier_use_local_config = 1
