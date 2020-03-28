@@ -1,8 +1,8 @@
 [user]
-    name = IGI-111
     email = igi-111@protonmail.com
+    name = IGI-111
 [push]
-    default = current
+    default = simple
 [core]
     editor = nvim
 [github]
@@ -10,11 +10,9 @@
 [alias]
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     patch = add -p
-[diff]
-    tool = nvimdiff
-[difftool "nvimdiff"]
-    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[difftool "nvim"]
+    cmd = nvim -f -c "Gdiffsplit!" "$MERGED"
 [merge]
-    tool = nvimdiff
-[mergetool "nvimdiff"]
-    cmd = nvim "+Gvdiff" "$MERGED"
+    tool = nvim
+[rerere]
+    enabled = true
