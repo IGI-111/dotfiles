@@ -56,6 +56,12 @@ if &t_Co >= 256 || has("gui_running")
   colorscheme palenight
 endif
 
+" FloatTerm
+let g:floaterm_position = 'center'
+let g:floaterm_borderchars = ['─', '│', '─', '│', '╭', '╮', '╯', '╰']
+hi FloatermNF guibg=g:terminal_color_background
+hi FloatermBorderNF guibg=g:terminal_color_background guifg=g:terminal_color_foreground
+
 " Lightline
 let g:lightline = {
       \ 'colorscheme': 'palenight',
@@ -85,11 +91,33 @@ let g:fzf_colors =
       \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
       \ 'hl+':     ['fg', 'Statement'],
       \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Exception'],
       \ 'prompt':  ['fg', 'Conditional'],
       \ 'pointer': ['fg', 'Exception'],
       \ 'marker':  ['fg', 'Keyword'],
       \ 'spinner': ['fg', 'Label'],
       \ 'header':  ['fg', 'Comment'] }
+
+if has('nvim-0.4.0')
+  let $FZF_DEFAULT_OPTS .= '--border --layout=reverse'
+  function! FloatingFZF()
+    let width = float2nr(&columns * 0.9)
+    let height = float2nr(&lines * 0.6)
+    let opts = { 'relative': 'editor',
+          \ 'row': (&lines - height) / 2,
+          \ 'col': (&columns - width) / 2,
+          \ 'width': width,
+          \ 'height': height,
+          \ 'style': 'minimal'
+          \}
+
+    let win = nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+    call setwinvar(win, '&winhighlight', 'NormalFloat:TabLine')
+  endfunction
+
+  let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+endif
+
 
 " add Rg command for ripgrep
 command! -bang -nargs=* Rg

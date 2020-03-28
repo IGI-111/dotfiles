@@ -61,9 +61,9 @@ Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
 Plug 'maximbaz/lightline-ale'
 Plug 'kshenoy/vim-signature'
-Plug 'kassio/neoterm'
 Plug 'rbong/galvanize.vim'
 Plug 'Valloric/ListToggle'
 Plug 'equalsraf/neovim-gui-shim'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()

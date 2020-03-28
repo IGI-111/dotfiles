@@ -28,15 +28,11 @@ vnoremap > >gv
 nnoremap <silent> <Leader>u :MundoToggle<CR>
 nnoremap <silent> <Leader>o :TagbarToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>t :Ttoggle<CR>
+let g:floaterm_keymap_toggle = '<leader>t'
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 nnoremap <silent> <Leader>f :Files<CR>
 nnoremap <silent> <Leader>r :Rg<CR>
-
-if exists(':tnoremap')
-    tnoremap <Esc> <C-\><C-n>
-endif
 
 nnoremap <silent> // :noh<CR>
 
