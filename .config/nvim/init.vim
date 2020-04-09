@@ -60,7 +60,9 @@ endif
 let g:floaterm_position = 'center'
 let g:floaterm_borderchars = ['─', '│', '─', '│', '╭', '╮', '╯', '╰']
 hi FloatermNF guibg=g:terminal_color_background
-hi FloatermBorderNF guibg=g:terminal_color_background guifg=g:terminal_color_foreground
+hi FloatermBorderNF guibg=g:terminal_color_background guifg='#c792ea'
+let g:floaterm_open_command = 'edit'
+let g:floaterm_gitcommit = 'split'
 
 " Lightline
 let g:lightline = {
@@ -136,12 +138,6 @@ function! s:fzf_statusline()
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
-
-" NeoTerm
-let g:neoterm_automap_keys = '<Leader>t'
-let g:neoterm_default_mod = 'vertical'
-let g:neoterm_size = 50
-let g:neoterm_fixed_size = 1
 
 " ultisnips options
 let g:UltiSnipsExpandTrigger="<c-j>"

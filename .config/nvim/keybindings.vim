@@ -28,7 +28,8 @@ vnoremap > >gv
 nnoremap <silent> <Leader>u :MundoToggle<CR>
 nnoremap <silent> <Leader>o :TagbarToggle<CR>
 nnoremap <silent> <Leader>n :NERDTreeToggle<CR>
-let g:floaterm_keymap_toggle = '<leader>t'
+nnoremap <silent> <Leader>t :FloatermToggle<CR>
+let g:floaterm_keymap_toggle = '<F12>'
 let g:lt_location_list_toggle_map = '<leader>l'
 let g:lt_quickfix_list_toggle_map = '<leader>q'
 nnoremap <silent> <Leader>f :Files<CR>
