@@ -1,0 +1,7 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+	include "fr"
+	include "level3(caps_switch)"
+	name[Group1] = "French (France with less as tilde)";
+	key <TLDE> { [ less, greater, less, greater ] };
+};

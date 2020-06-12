@@ -182,7 +182,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+m exec --no-startup-id "i3lock -c '#1f1f1f' && sleep 1 && xset dpms force off"
+bindsym $mod+m exec --no-startup-id "swaylock -c '#1f1f1f' && sleep 1 && xset dpms force off"
 
 # Basic bar configuration using the Base16 variables.
 bar {
@@ -206,3 +206,6 @@ bar {
 # Setup the wallpaper
 exec --no-startup-id swaybg -i Pics/strider.png -m fill
 
+input type:keyboard {
+    xkb_layout fr-less-tilde
+}
