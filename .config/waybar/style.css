@@ -1,0 +1,90 @@
+* {
+	border: none;
+	border-radius: 0;
+	/* `otf-font-awesome` is required to be installed for icons */
+	font-family: sans-serif;
+	font-size: 14px;
+	min-height: 0;
+}
+
+window#waybar {
+	background-color: #292D3E;
+	border-bottom: 3px solid #444267;
+	color: #ffffff;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+/*
+window#waybar.empty {
+background-color: transparent;
+}
+window#waybar.solo {
+background-color: #FFFFFF;
+}
+ */
+
+#workspaces button {
+	padding: 0 5px;
+	background-color: #444267;
+	color: #959DCB;
+	border-bottom: 3px solid #676E95;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+	background: rgba(0, 0, 0, 0.2);
+	box-shadow: inherit;
+	border-bottom: 3px solid #89ddff;
+	color: #89ddff;
+}
+
+#workspaces button.focused {
+	border-bottom: 3px solid #82aaff;
+	background-color: #292D3E;
+	color: #82aaff;
+}
+
+#workspaces button.urgent {
+	background-color: #eb4d4b;
+}
+
+#mode {
+	background-color: #64727D;
+	border-bottom: 3px solid #ffffff;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#custom-vpn,
+#mpd {
+	padding: 0 10px;
+	margin: 0 4px;
+	background-color: #444267;
+	color: #959DCB;
+	border-bottom: 3px solid #676E95;
+}
+
+label:focus {
+	background-color: #000000;
+}
+
+#custom-vpn.off, #network.linked, #network.disconnected {
+	background-color: #f07178;
+	color: #292D3E;
+	border-bottom: 3px solid #ff8b92
+}
