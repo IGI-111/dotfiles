@@ -3,6 +3,8 @@
 "  / / _ \/ / __/| |/ / /  ' \
 " /_/_//_/_/\__(_)___/_/_/_/_/
 
+let g:polyglot_disabled = ['latex']
+
 source ~/.config/nvim/plugins.vim
 
 " ================ General Config ====================
@@ -27,7 +29,6 @@ set diffopt+=vertical               "prefer vertical diffs
 set shortmess=OtI                   "disable start message
 
 "LaTeX configuration
-let g:polyglot_disabled = ['latex']
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 autocmd FileType tex setlocal wrap spell textwidth=99

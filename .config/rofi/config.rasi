@@ -1,4 +1,4 @@
 configuration {
 	font: "Droid Sans 14";
-	theme: "gruvbox-dark-hard";
+	theme: "sidebar";
 }
