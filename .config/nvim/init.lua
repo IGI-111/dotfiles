@@ -1,16 +1,4 @@
-require 'plugins'
-require 'editor'
-
-require 'config.floaterm'
-require 'config.lightline'
--- require 'config.lualine'
--- require 'config.ale'
-require 'config.gitgutter'
-require 'config.ts_rainbow'
-require 'config.compe'
-require 'config.lspconfig'
-require 'config.neoformat'
-require 'config.mundo'
-require 'config.tagbar'
-
-require 'keybindings'
+require "plugins"
+require "editor"
+require "config"
+require "keybindings"
