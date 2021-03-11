@@ -1,4 +1,4 @@
-vim.o.number = true -- Line numbers are good
+vim.cmd "set number" -- Line numbers are good
 vim.o.cursorline = true -- Highlight the line the cursor is on
 vim.o.colorcolumn = "99" -- Highlight the character limit
 vim.o.backspace = "indent,eol,start" -- Allow backspace in insert mode
