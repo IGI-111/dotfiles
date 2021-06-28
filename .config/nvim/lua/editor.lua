@@ -55,7 +55,7 @@ vim.cmd "filetype indent on"
 
 -- display tabs and trailing space visually
 vim.o.list = true
-vim.o.listchars = [[trail:·,tab:┊\ ,extends:>,precedes:<,nbsp:·]]
+vim.o.listchars = [[trail:·,tab:┊ ,extends:>,precedes:<,nbsp:·]]
 
 vim.o.wrap = false
 vim.o.linebreak = true
