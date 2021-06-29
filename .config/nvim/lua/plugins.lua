@@ -5,12 +5,14 @@ paq {"savq/paq-nvim", opt = true}
 
 -- Git integration
 paq "tpope/vim-fugitive"
-paq "airblade/vim-gitgutter"
+paq "nvim-lua/plenary.nvim"
+paq "lewis6991/gitsigns.nvim"
 
 -- Snippets
 paq "hrsh7th/vim-vsnip"
 paq "hrsh7th/vim-vsnip-integ"
-paq 'stevearc/vim-vsnip-snippets'
+paq "stevearc/vim-vsnip-snippets"
+paq "rafamadriz/friendly-snippets"
 
 -- Motions and general text editing
 paq "godlygeek/tabular"
@@ -46,7 +48,6 @@ paq {"nvim-treesitter/nvim-treesitter", run = 'function() vim.cmd"TSUpdate" end'
 
 -- Interface
 paq "p00f/nvim-ts-rainbow"
-paq "tpope/vim-vinegar"
 paq "simnalamburt/vim-mundo"
 paq "majutsushi/tagbar"
 paq "hoob3rt/lualine.nvim"
@@ -55,3 +56,5 @@ paq "voldikss/vim-floaterm"
 paq "nvim-lua/popup.nvim"
 paq "nvim-lua/plenary.nvim"
 paq "nvim-telescope/telescope.nvim"
+paq "kyazdani42/nvim-tree.lua"
+
