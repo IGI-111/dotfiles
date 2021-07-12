@@ -25,9 +25,11 @@ paq "triglav/vim-visual-increment"
 paq "matze/vim-move"
 paq "tpope/vim-sleuth"
 
+-- LSP
+paq "neovim/nvim-lspconfig"
+
 -- Autocompletion
 -- paq 'zxqfl/tabnine-vim'
-paq "neovim/nvim-lspconfig"
 paq "hrsh7th/nvim-compe"
 
 -- Formatting
@@ -57,4 +59,5 @@ paq "nvim-lua/popup.nvim"
 paq "nvim-lua/plenary.nvim"
 paq "nvim-telescope/telescope.nvim"
 paq "kyazdani42/nvim-tree.lua"
-
+paq 'tamago324/lir.nvim'
+-- paq 'kyazdani42/nvim-web-devicons'
