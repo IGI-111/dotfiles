@@ -15,7 +15,7 @@ require'lir'.setup {
     ['q']     = actions.quit,
 
     ['d']     = actions.mkdir,
-    ['a']     = actions.newfile,
+    ['%']     = actions.newfile,
     ['R']     = actions.rename,
     ['<C-g>']     = actions.cd,
     ['y']     = actions.yank_path,

@@ -47,9 +47,9 @@ paq "drewtempelmeyer/palenight.vim"
 
 -- Syntax and language integration
 paq {"nvim-treesitter/nvim-treesitter", run = 'function() vim.cmd"TSUpdate" end'}
+paq "p00f/nvim-ts-rainbow"
 
 -- Interface
-paq "p00f/nvim-ts-rainbow"
 paq "simnalamburt/vim-mundo"
 paq "majutsushi/tagbar"
 paq "hoob3rt/lualine.nvim"
@@ -58,6 +58,5 @@ paq "voldikss/vim-floaterm"
 paq "nvim-lua/popup.nvim"
 paq "nvim-lua/plenary.nvim"
 paq "nvim-telescope/telescope.nvim"
-paq "kyazdani42/nvim-tree.lua"
 paq 'tamago324/lir.nvim'
 -- paq 'kyazdani42/nvim-web-devicons'
