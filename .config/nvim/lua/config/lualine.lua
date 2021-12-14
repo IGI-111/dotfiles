@@ -11,7 +11,7 @@ require("lualine").setup {
     lualine_c = {"filename"},
     lualine_x = {"encoding", "fileformat", "filetype"},
     lualine_y = {
-      {"diagnostics", sources = {"nvim_lsp", "coc", "ale"}},
+      {"diagnostics", sources = {"nvim_diagnostic", "coc", "ale"}},
       "progress"
     },
     lualine_z = {"location"}
@@ -19,7 +19,7 @@ require("lualine").setup {
   inactive_sections = {
     lualine_a = {},
     lualine_b = {
-      {"diagnostics", sources = {"nvim_lsp", "coc", "ale"}}
+      {"diagnostics", sources = {"nvim_diagnostic", "coc", "ale"}}
     },
     lualine_c = {"filename"},
     lualine_x = {"location"},

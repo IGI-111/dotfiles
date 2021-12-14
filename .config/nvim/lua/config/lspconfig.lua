@@ -1,6 +1,9 @@
 local lspconfig = require 'lspconfig'
 lspconfig.rust_analyzer.setup {}
-lspconfig.tsserver.setup{}
+-- lspconfig.tsserver.setup{}
+
+vim.g.markdown_fenced_languages = { "ts=typescript" }
+lspconfig.denols.setup{}
 
 -- language server keybindings
 vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", {noremap = true, silent = true})
@@ -18,14 +21,14 @@ vim.api.nvim_set_keymap("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", {nor
 vim.api.nvim_set_keymap(
   "n",
   "<space>e",
-  "<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>",
+  "<cmd>lua vim.diagnostic.open_float()<CR>",
   {noremap = true, silent = true}
 )
-vim.api.nvim_set_keymap("n", "[d", "<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>", {noremap = true, silent = true})
-vim.api.nvim_set_keymap("n", "]d", "<cmd>lua vim.lsp.diagnostic.goto_next()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", {noremap = true, silent = true})
 vim.api.nvim_set_keymap(
   "n",
   "<space>q",
-  "<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>",
+  "<cmd>lua vim.diagnostic.setloclist()<CR>",
   {noremap = true, silent = true}
 )
