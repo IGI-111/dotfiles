@@ -2,7 +2,7 @@
     email = igi-111@protonmail.com
     name = IGI-111
 [push]
-    default = simple
+    default = current
 [core]
     editor = nvim
 [github]
