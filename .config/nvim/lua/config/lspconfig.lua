@@ -1,9 +1,11 @@
 local lspconfig = require 'lspconfig'
 lspconfig.rust_analyzer.setup {}
--- lspconfig.tsserver.setup{}
+lspconfig.tsserver.setup{}
 
 vim.g.markdown_fenced_languages = { "ts=typescript" }
-lspconfig.denols.setup{}
+-- lspconfig.denols.setup{}
+
+lspconfig.pyright.setup{}
 
 -- language server keybindings
 vim.api.nvim_set_keymap("n", "gD", ":lua vim.lsp.buf.declaration()<CR>", {noremap = true, silent = true})
