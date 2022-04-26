@@ -1,61 +1,61 @@
-require "paq" {
-    "savq/paq-nvim";
+return require("packer").startup(function()
+    use 'wbthomason/packer.nvim'
 
     -- Git integration
-    "tpope/vim-fugitive";
-    "nvim-lua/plenary.nvim";
-    "lewis6991/gitsigns.nvim";
+    use "tpope/vim-fugitive"
+    use "nvim-lua/plenary.nvim"
+    use "lewis6991/gitsigns.nvim"
 
     -- Snippets
-    "hrsh7th/vim-vsnip";
-    "hrsh7th/vim-vsnip-integ";
-    "stevearc/vim-vsnip-snippets";
-    "rafamadriz/friendly-snippets";
+    use "hrsh7th/vim-vsnip"
+    use "hrsh7th/vim-vsnip-integ"
+    use "stevearc/vim-vsnip-snippets"
+    use "rafamadriz/friendly-snippets"
 
     -- Motions and general text editing
-    "godlygeek/tabular";
-    "Tpope/vim-commentary";
-    "tpope/vim-repeat";
-    "tpope/vim-abolish";
-    "tpope/vim-surround";
-    "wellle/targets.vim";
-    "triglav/vim-visual-increment";
-    "matze/vim-move";
-    "tpope/vim-sleuth";
+    use "godlygeek/tabular"
+    use "Tpope/vim-commentary"
+    use "tpope/vim-repeat"
+    use "tpope/vim-abolish"
+    use "tpope/vim-surround"
+    use "wellle/targets.vim"
+    use "triglav/vim-visual-increment"
+    use "matze/vim-move"
+    use "tpope/vim-sleuth"
 
     -- LSP
-    "neovim/nvim-lspconfig";
+    use "neovim/nvim-lspconfig"
 
     -- Autocompletion
     --     'zxqfl/tabnine-vim'
-    "hrsh7th/nvim-compe";
+    use "hrsh7th/nvim-compe"
 
     -- Formatting
-    "mhartington/formatter.nvim";
+    use "mhartington/formatter.nvim"
 
     -- Colorschemes
-    {"sjl/badwolf", opt = true};
-    {"chriskempson/vim-tomorrow-theme", opt = true};
-    {"NLKNguyen/papercolor-theme", opt = true};
-    {"nanotech/jellybeans.vim", opt = true};
-    {"morhetz/gruvbox", opt = true};
-    {"blueshirts/darcula", opt = true};
-    {"atelierbram/vim-colors_atelier-schemes", opt = true};
-    "drewtempelmeyer/palenight.vim";
+    use {"sjl/badwolf", opt = true};
+    use {"chriskempson/vim-tomorrow-theme", opt = true};
+    use {"NLKNguyen/papercolor-theme", opt = true};
+    use {"nanotech/jellybeans.vim", opt = true};
+    use {"morhetz/gruvbox", opt = true};
+    use {"blueshirts/darcula", opt = true};
+    use {"atelierbram/vim-colors_atelier-schemes", opt = true};
+    use "drewtempelmeyer/palenight.vim";
 
     -- Syntax and language integration
-    {"nvim-treesitter/nvim-treesitter", run = 'function() vim.cmd"TSUpdate" end'};
-    "p00f/nvim-ts-rainbow";
+    use {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
+    use "p00f/nvim-ts-rainbow"
 
     -- Interface
-    "simnalamburt/vim-mundo";
-    "majutsushi/tagbar";
-    "hoob3rt/lualine.nvim";
-    "kshenoy/vim-signature";
-    "voldikss/vim-floaterm";
-    "nvim-lua/popup.nvim";
-    "nvim-lua/plenary.nvim";
-    "nvim-telescope/telescope.nvim";
-    'tamago324/lir.nvim';
+    use "simnalamburt/vim-mundo"
+    use "majutsushi/tagbar"
+    use "hoob3rt/lualine.nvim"
+    use "kshenoy/vim-signature"
+    use "voldikss/vim-floaterm"
+    use "nvim-lua/popup.nvim"
+    use "nvim-lua/plenary.nvim"
+    use "nvim-telescope/telescope.nvim"
+    use 'tamago324/lir.nvim'
     --     'kyazdani42/nvim-web-devicons'
-}
+end)
