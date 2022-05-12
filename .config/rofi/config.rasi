@@ -1,4 +1,5 @@
 configuration {
 	font: "Droid Sans 14";
-	theme: "sidebar";
 }
+
+@theme "sidebar"
