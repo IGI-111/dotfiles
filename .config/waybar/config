@@ -1,66 +1,24 @@
 {
-	"layer": "top",
-	"position": "top",
-	"height": 30,
-	// "width": 1280, // Waybar width
-	// Choose the order of the modules
-	"modules-left": ["sway/workspaces", "sway/mode"],
-	"modules-center": ["sway/window"],
-	"modules-right": ["network",  "custom/vpn", "clock", "tray"],
-	// Modules configuration
-	// "sway/workspaces": {
-	//     "disable-scroll": true,
-	//     "all-outputs": true,
-	//     "format": "{name}: {icon}",
-	//     "format-icons": {
-	//         "1": "",
-	//         "2": "",
-	//         "3": "",
-	//         "4": "",
-	//         "5": "",
-	//         "urgent": "",
-	//         "focused": "",
-	//         "default": ""
-	//     }
-	// },
-	"sway/mode": {
-		"format": "<span style=\"italic\">{}</span>"
-	},
-	"tray": {
-		// "icon-size": 21,
-		"spacing": 10
-	},
-	"clock": {
-		"tooltip": false,
-		"format": "{:%Y-%m-%d :%H:%M}"
-	},
-	"cpu": {
-		"format": "cpu: {usage}%",
-		"tooltip": false
-	},
-	"memory": {
-		"format": "mem: {}%"
-	},
-	"temperature": {
-		"critical-threshold": 80,
-		"format": "{temperatureC}°C"
-	},
-	"network": {
-		"interface": "enp5s0",
-		"format-wifi": "{essid} ({signalStrength}%)",
-		"format-ethernet": "{ifname}: {ipaddr}/{cidr}",
-		"format-linked": "{ifname} (No IP)",
-		"format-disconnected": "Disconnected"
-	},
-	"custom/vpn": {
-		"interval": 1,
-		"tooltip": false,
-		"format": "vpn: {}",
-		"return-type": "json",
-		"exec": "if [ -d /proc/sys/net/ipv4/conf/tun0 ]; then echo '{\"text\":\"ON\", \"class\": \"on\"}'; else echo '{\"text\":\"OFF\", \"class\": \"off\"}'; fi"
-	},
-	"pulseaudio": {
-		"format": "vol: {volume}%",
-		"on-click": "pavucontrol"
-	}
+    "layer": "bottom",
+    "position": "top",
+    "height": 15,
+
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": [],
+    "modules-right": ["tray", "battery", "network", "clock"],
+    "sway/mode": {
+        "format": " {}"
+    },
+    "sway/workspaces": {
+        "format": "{name}",
+        "disable-scroll": true
+    },
+    "sway/window": {
+        "max-length": 80,
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a %d %b %H:%M}",
+        "tooltip": false
+    }
 }
